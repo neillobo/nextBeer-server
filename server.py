@@ -10,10 +10,6 @@ def get_recommendation(user_id):
 def add_to_profile(user_id, beer_id, beer_rating):
     pass
 
-# def log(*args):
-#   for arg in args:
-#     print arg
-
 @app.route('/api/v1/', methods = ['GET'])
 def respond():
     print request.headers
@@ -23,7 +19,6 @@ def respond():
     beer_id = 4321
     beer_rating = 1
     
-    log(unique_id, beer_id, beer_rating)
     add_to_profile(unique_id, beer_id, beer_rating)
     return jsonify( { 'recomendation': get_next_recommendation(unique_id) } )
 
