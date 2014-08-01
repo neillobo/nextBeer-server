@@ -1,0 +1,784 @@
+beer/name, beer/beerId, beer/brewerId, beer/ABV, beer/style, review/appearance, review/aroma, review/palate, review/taste, review/overall, review/profileName
+Sausa Weizen,47986,10325,5.00,Hefeweizen,2.5,2,1.5,1.5,1.5,stcules
+Red Moon,48213,10325,6.20,English Strong Ale,3,2.5,3,3,3,stcules
+Black Horse Black Beer,48215,10325,6.50,Foreign / Export Stout,3,2.5,3,3,3,stcules
+Sausa Pils,47969,10325,5.00,German Pilsener,3.5,3,2.5,3,3,stcules
+Cauldron DIPA,64883,1075,7.70,American Double / Imperial IPA,4,4.5,4,4.5,4,johnmichaelsen
+Caldera Ginger Beer,52159,1075,4.70,Herbed / Spiced Beer,3.5,3.5,3,3.5,3,oline73
+Caldera Ginger Beer,52159,1075,4.70,Herbed / Spiced Beer,3.5,3.5,4,4,3.5,Reidrover
+Caldera Ginger Beer,52159,1075,4.70,Herbed / Spiced Beer,3.5,2.5,2,3.5,3,alpinebryant
+Caldera Ginger Beer,52159,1075,4.70,Herbed / Spiced Beer,3.5,3,3.5,4,4,LordAdmNelson
+Caldera Ginger Beer,52159,1075,4.70,Herbed / Spiced Beer,5,3.5,4,4,4.5,augustgarage
+Caldera Ginger Beer,52159,1075,4.70,Herbed / Spiced Beer,4,5,4,4,5,MadeInOregon
+Caldera Ginger Beer,52159,1075,4.70,Herbed / Spiced Beer,4,4,3.5,4,4,rawthar
+Caldera Ginger Beer,52159,1075,4.70,Herbed / Spiced Beer,3,4.5,2.5,3,4,Halcyondays
+Caldera Ginger Beer,52159,1075,4.70,Herbed / Spiced Beer,3,4,3,4,3.5,RangerClegg
+Caldera Oatmeal Stout,10789,1075,7.20,Oatmeal Stout,2.5,3,3,3,3,Beerandraiderfan
+Caldera Oatmeal Stout,10789,1075,7.20,Oatmeal Stout,2.5,1.5,2.5,2,2,RedDiamond
+Caldera OBF 15,12386,1075,5.60,American Pale Lager,4,3,4,4,4,beerguy101
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,3,4.5,4,4.5,4.5,UCLABrewN84
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4,3,4,4,zaphodchak
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4.5,3.5,4,4,Tilley4
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4.5,5,4,4.5,4.5,mikedrinksbeer2
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4.5,4,4.5,4,dbmernin83
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4.5,4,4.5,4.5,titosupertramp
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,3.5,5,3.5,5,5,optimator13
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4.5,4,4.5,4.5,Blakaeris
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,5,4,4,4.5,bashiba
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,3.5,4.5,4,4.5,4.5,Klym
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4.5,4,4,4.5,flexabull
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4.5,4,5,5,Bung
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4.5,4,4,4,4,oberon
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4.5,4,4,4.5,t420o
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4,4,4,4,DarthKostrizer
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,3,4,4,4,4,MrVonzipper
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,3,4.5,2,3,3,Beerandraiderfan
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4.5,4.5,4,3.5,4,TheWhiskerReview
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4.5,3.5,4,3.5,3.5,Elimination
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4,4.5,4.5,4.5,DoubleJ
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,3.5,4.5,4,5,5,Deuane
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4,4,4,4,Mattybeerguy
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,3.5,4,4,4,4,micromaniac129
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,3.5,5,3.5,4,3.5,beagle75
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,3.5,4,4,4,4,northyorksammy
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4,4.5,4,4.5,vette2006c5r
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,3.5,3,3.5,4,EvanEngelstad
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4,4,4.5,4.5,djeucalyptus
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,3.5,4,4.5,4,4,ccrida
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,3.5,3.5,3.5,3.5,cooch69
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4,3.5,3.5,3.5,DogFood11
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4.5,4,4.5,4,brewandbbq
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,3.5,4,4,3.5,Fatehunter
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,3,4.5,4.5,4.5,4.5,hopsbreath
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,3.5,4.5,4,5,4.5,augustgarage
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4.5,4,4,4.5,Slatetank
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,3.5,5,4.5,4.5,4.5,Jason
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4,4,4,4,Proteus93
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4.5,4,4.5,4,SShelly
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,4,4.5,3.5,4,4,zoso1967
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,3.5,4.5,3.5,4,4,Halcyondays
+Rauch Ür Bock,58046,1075,7.40,Rauchbier,3.5,4.5,4.5,4,4,msubulldog25
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,4,4,4,NJpadreFan
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3,3.5,2.5,2.5,vacax
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,4,3.5,4,d0ggnate
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,3.5,4,4.5,babyhobbes
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,4,4,4.5,mdagnew
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,3.5,4,4,4,mikesgroove
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,4,4,4,hdofu
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,3.5,4,3.5,argock
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,3.5,3.5,3.5,Seanibus
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,4,4.5,4,5,GratefulBeerGuy
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4.5,4.5,4.5,PDXHops
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4,4,IMincedTheKing
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,4,3.5,4,Goliath
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,4,4.5,4,zeff80
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,4,4,4,akorsak
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3,3.5,4,4,wchesak
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,4,3.5,3.5,beer2day
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),2.5,3.5,3.5,4,4,bfields4
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,3.5,4,dyan
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,3.5,3.5,3.5,Monkeyknife
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,3.5,3.5,4.5,HopDerek
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,4,4,4,4.5,djeucalyptus
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,4,5,5,mtrentm
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,4,4,4,5,maximum12
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,3.5,3.5,3.5,blackie
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,3.5,4,4,JayQue
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,4,3.5,4.5,bbothen
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,3.5,4,Kegatron
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4.5,3.5,4,CrellMoset
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3,3.5,3.5,3.5,beerman21
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4,4,BeerSox
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,3,4,3.5,Proteus93
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,3,3.5,3.5,hopdog
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,3.5,3.5,4,gford217
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3,4,4,4,thehand
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4.5,4,4.5,GbVDave
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3,3,2.5,3,dfitch81
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,4,3.5,3.5,RJLarse
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,4.5,4.5,4.5,4.5,SurlyDuff
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,3,3.5,4,Wetpaperbag
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4,4.5,largadeer
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4.5,3.5,3.5,3.5,cswhitehorse
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,4,4,4,elniko
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,3.5,4,4.5,deltatauhobbit
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,4,4,3.5,4,woemad
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,4.5,4,4.5,czechsaaz
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,4,4,4,4,Wasatch
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,3.5,4,4.5,oberon
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,4,3.5,3.5,MuenchenerKindl
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),5,4,3.5,4,3.5,ccrida
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3,3.5,4,4,4.5,brentk56
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,4.5,4,5,BeerZack
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,3.5,3.5,4,russpowell
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,3,4,4,Spikester
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3,2.5,3,3,3,Dubbercody
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,3.5,3,3,ChainGangGuy
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,4,4.5,4,4.5,Vancer
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,3.5,4,4.5,ghostwalker
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,4,4,4,4,udubdawg
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4.5,4,cburian
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,3.5,4,4.5,flexabull
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3,2.5,3.5,4,mnwags
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,4.5,4,4.5,NeroFiddled
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,4,4,5,IntriqKen
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3,4,3.5,3,3.5,JoshD
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,4,4,4,lackenhauser
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4,4.5,kgotcher
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3,4,3.5,4,4.5,MLegendre
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,3,3,3,freed
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,4,4,4,ddarden
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,4,3.5,4,ElGordo
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,4.5,4,4,4.5,BuckeyeNation
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,3.5,4,4,Reidrover
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4,4,BeerLover99
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,4,3.5,3.5,syrupjoe
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4.5,4.5,4,4,BrewerB
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,3.5,4,3,3.5,vande
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,3.5,4,4,ColForbinBC
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,2.5,3.5,3,3,harrymel
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,3.5,3.5,4,4,woosterbill
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,4,4,4,4,ReelBigwigFish
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4.5,4,4,cbarrett4
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,4,4,4,chodinheaven
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,3.5,4,3.5,Beerandraiderfan
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,3.5,4,4,4,MrVonzipper
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,3.5,4,3.5,witster18
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,4.5,4,4,jeff1973
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,3.5,4.5,4,Duff27
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3,4,3,3,Phelps
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,3,3.5,3.5,mgbickel
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,3.5,2.5,3,Jimmys
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,3.5,3.5,4,Scotchboy
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,3,3,3,TheGordianKnot
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,4,3.5,3.5,loren01
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,4,4,3.5,rootbeerman
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,4,4,4,4,corby112
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,3.5,3.5,3.5,inlimbo77
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,5,4.5,4,4.5,youradhere
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,2,2.5,2.5,Thorpe429
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,4,4.5,4,FosterJM
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),2,2,4,4,4.5,bobhits
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,3,3.5,3.5,u2carew
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,3,4,3,beerman207
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,3.5,4,3.5,BEERchitect
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,3.5,4,4,msubulldog25
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,4,3.5,4,climax
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),5,4,4,4,4,AEK
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3,3,2.5,3,3,Tilley4
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4.5,4.5,4,4.5,wcudwight
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3,3.5,3,4,kzoobrew
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,3.5,4,3.5,hawks10
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,4,4,4,4.5,dudemuskie
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,3.5,4,elgiacomo
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3,4,2.5,4,ArrogantB
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,3.5,4.5,4,stephens101
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,5,3.5,3.5,StaveHooks
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,3.5,3.5,3.5,GarrettMD
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4,4,barleywinefiend
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4.5,4,4.5,merlin48
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3,3.5,3,3.5,jampics2
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,5,4,5,ThreeWiseMen
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3,3,4,4,philbertk
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4,4.5,Brent
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,4,3,3,Bubba83
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4,4,BeerAdvocate
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,4,4,4,mikereaser
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3,4,4,4,jkrich
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,4,3.5,4.5,SpdKilz
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,3.5,4,4,barleywinefiend
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,3.5,4,joepais
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,3.5,4,4,Beejay
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),2.5,3.5,3,4.5,4,Bfarr
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,4,3.5,4,robwestcott
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4,4,tempest
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4,4.5,indiapaleale
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4,4.5,Cresant
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,4,4,3,3,Bitterbill
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,4,4,4.5,hosehead83
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4.5,4,kshankar
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4.5,4,4,4,4.5,bump8628
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,4,4,4,WesWes
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),2.5,3,2.5,3,3,beertunes
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,3.5,4,ClockworkOrange
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),5,3.5,4.5,4,4,organicbrewer
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4.5,4,5,onix1agr
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,4,4,4,dedrinker
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4.5,4,4.5,4.5,woodychandler
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3,3.5,3.5,3.5,3.5,therica
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,4,4,4.5,rfgetz
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,3.5,3,4,JohnGalt1
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4.5,5,womencantsail
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4.5,4,4.5,4.5,ckeegan04
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3.5,4,3.5,4.5,WeisGuy
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3,5,5,5,5,cjever19
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3,4,5,4.5,Rmassimiano
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4.5,4.5,droomyster
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,4,4,4,flagmantho
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3,3.5,4,4,snaotheus
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,4,4.5,RoyalT
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,3.5,4,3.5,Slatetank
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,4,4,3.5,4,philbe311
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),3.5,3.5,4,4,4,Deuane
+Caldera Pale Ale,25414,1075,5.50,American Pale Ale (APA),4,3,3.5,3,3.5,Halcyondays
+Pilot Rock Porter,10788,1075,5.80,American Porter,4.5,4.5,4.5,5,4.5,Cyberkedi
+Pilot Rock Porter,10788,1075,5.80,American Porter,4,4,4.5,4,4,CaptainIPA
+Pilot Rock Porter,10788,1075,5.80,American Porter,3,3.5,5,4.5,4.5,anchordrinker
+Pilot Rock Porter,10788,1075,5.80,American Porter,4,4,4,4.5,4.5,spointon
+Pilot Rock Porter,10788,1075,5.80,American Porter,4,3.5,3.5,3.5,3.5,slaintemhor
+Pilot Rock Porter,10788,1075,5.80,American Porter,4.5,4,4,4,5,Reidrover
+Pilot Rock Porter,10788,1075,5.80,American Porter,4.5,3.5,4.5,4,4.5,Gavage
+Pilot Rock Porter,10788,1075,5.80,American Porter,3.5,3.5,3.5,3,3.5,Thrasher
+Pilot Rock Porter,10788,1075,5.80,American Porter,3,2.5,2.5,3,2.5,RedDiamond
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,3.5,2,3.5,3.5,BilbosNuts
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,2,4,3,2.5,3,n2185
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,3.5,3.5,3,3.5,3.5,russpowell
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,3.5,3.5,4,4,mjyoung
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,3.5,3.5,3.5,3.5,phichifiji00
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,3.5,4,3.5,3.5,mgbickel
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,3,3.5,4,4,vande
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,3.5,3.5,3.5,3,oline73
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,4,3.5,3.5,4.5,pitasoup
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,3.5,3.5,4,4,4,match1112
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,3.5,3,3.5,3,3.5,Siggy125
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,4,3.5,3.5,3.5,beer2day
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,4,3.5,4,4,Knapp85
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4.5,4,4,3.5,4,Urbancaver
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,3.5,4,4,4,sgsmfdoom
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,3,4,3.5,4,Nashvillain
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,4,4,4,4,CHILLINDYLAN
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,4,4,3.5,4,emmasdad
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,3.5,4,3.5,3.5,3.5,Bendurgin
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,3,3.5,3.5,3.5,BuckeyeNation
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,3.5,3.5,3.5,3.5,3.5,BeerAdvocate
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,4,4,4,4,GarthDanielson
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,3.5,4,3.5,4,4,chumba526
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,2.5,3.5,3,3,Xul
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,3.5,2.5,3.5,3.5,3.5,Docer
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,2.5,2.5,2,2,rand
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,2.5,2,1,2.5,2.5,Arbitrator
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,3.5,3.5,3,3,3,ccrida
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,4,4,4,4,brewandbbq
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,3.5,4,2.5,3,3,GradyS1
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,3.5,3.5,3.5,3,meatyard
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,4,4,3.5,4,Mora2000
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,4,3.5,4,5,GRG1313
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4.5,3.5,4,3,4,zoso1967
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4.5,3.5,3.5,4,3.5,DeanMoriarty
+Vas Deferens Ale,58920,1075,8.10,Belgian Strong Dark Ale,4,3,3.5,3.5,3.5,Halcyondays
+Cauldron Espresso Stout,21241,1075,,American Stout,3,3,4,3,3,RedDiamond
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,3.5,4,4,4,4,suncrust
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4,4,3.5,4,4,dc55110
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,3,3.5,4,4.5,4,snaotheus
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4,4,4.5,4,4,oberon
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,2.5,4,4.5,4,4,russpowell
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4.5,4,4,4,4,julian
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4,4,5,4.5,4.5,Halcyondays
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4.5,4,4,4.5,4.5,UCLABrewN84
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,3.5,3,4,4,3.5,Beerandraiderfan
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4.5,4,4,4.5,4,tdm168
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4,4,4,4.5,4.5,Derek
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4,4,4.5,4.5,4.5,jeff1973
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4.5,4.5,4.5,5,5,Tilley4
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,5,5,5,4.5,5,Cyberkedi
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4,4,4.5,4.5,4,onix1agr
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4.5,4,4.5,4.5,4.5,oglmcdgl
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,3.5,3,3,4,4,youradhere
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4,4,3.5,4,4,Knapp85
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4.5,4.5,4,5,4.5,kitty66
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4,4,4.5,4.5,4.5,lowendfrequency
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,3.5,4,4,4,3,harrymel
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4,4,4,3.5,3.5,Vdubb86
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4,3.5,4,4,3.5,TMoney2591
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4.5,3.5,4,3.5,4,vkv822
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4,4,4,4.5,4,barleywinefiend
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4,4,4.5,4.5,4.5,ccrida
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4,4,4.5,4.5,4.5,msubulldog25
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4.5,4.5,5,5,5,bitterthebetter
+Old Growth Imperial Stout,20818,1075,8.80,Russian Imperial Stout,4.5,4,4,4,4,RedDiamond
+Dry Hop Red,10786,1075,5.70,American Amber / Red Ale,3.5,3.5,3.5,3.5,3.5,Beerandraiderfan
+Dry Hop Red,10786,1075,5.70,American Amber / Red Ale,4,4,4,4,4,mcallister
+Dry Hop Red,10786,1075,5.70,American Amber / Red Ale,4,4.5,4,4.5,4.5,ccrida
+Dry Hop Red,10786,1075,5.70,American Amber / Red Ale,4,4,4,4,4,flexabull
+Dry Hop Red,10786,1075,5.70,American Amber / Red Ale,3,4,3.5,4,4,Crotor
+Dry Hop Red,10786,1075,5.70,American Amber / Red Ale,4,4,4.5,4.5,4,unklesyd
+Dry Hop Red,10786,1075,5.70,American Amber / Red Ale,4.5,4.5,4,4.5,4.5,Valevapor
+Dry Hop Red,10786,1075,5.70,American Amber / Red Ale,3.5,4,3,4,3,GreenWBush
+Dry Hop Red,10786,1075,5.70,American Amber / Red Ale,3.5,4.5,4,4,4.5,RedDiamond
+Dry Hop Red,10786,1075,5.70,American Amber / Red Ale,4.5,4.5,4,4,4,freed
+Southside Strong,10794,1075,7.00,American Strong Ale,4,4,4,4,4,inthebeeraisle
+Caldera Märzen,54330,1075,6.30,Märzen / Oktoberfest,4,4,4,4,4.5,ElGordo
+Lawnmower Lager,20817,1075,3.90,American Adjunct Lager,4,3,2,3,3,isualum12
+Lawnmower Lager,20817,1075,3.90,American Adjunct Lager,4,4,4,4,4,BeerAdvocate
+Lawnmower Lager,20817,1075,3.90,American Adjunct Lager,3.5,3,3.5,3.5,4.5,JohnGalt1
+Lawnmower Lager,20817,1075,3.90,American Adjunct Lager,3.5,3.5,3.5,3.5,4,merlin48
+Lawnmower Lager,20817,1075,3.90,American Adjunct Lager,3.5,3.5,3,3,3,philbe311
+Lawnmower Lager,20817,1075,3.90,American Adjunct Lager,3,3,2.5,3,3.5,SpdKilz
+Lawnmower Lager,20817,1075,3.90,American Adjunct Lager,3,3,3,3,3,DeanMoriarty
+Lawnmower Lager,20817,1075,3.90,American Adjunct Lager,3.5,3.5,3,3.5,4.5,zoso1967
+Lawnmower Lager,20817,1075,3.90,American Adjunct Lager,3,2.5,4,3,3.5,Halcyondays
+Lawnmower Lager,20817,1075,3.90,American Adjunct Lager,4,4,4,4.5,5,Wetpaperbag
+Lawnmower Lager,20817,1075,3.90,American Adjunct Lager,2,2.5,2.5,2.5,2,IronLover
+Lawnmower Lager,20817,1075,3.90,American Adjunct Lager,2,3,2.5,3,4,Reidrover
+Lawnmower Lager,20817,1075,3.90,American Adjunct Lager,4,3.5,3,4,4.5,Spikester
+Lawnmower Lager,20817,1075,3.90,American Adjunct Lager,1,1.5,1,1,1,kevinmkirk
+Caldera Rose Petal (Kettle Series),61427,1075,6.70,American Blonde Ale,3,3.5,2,3,3,notchucknorris
+Caldera Rose Petal (Kettle Series),61427,1075,6.70,American Blonde Ale,4,4,3.5,4.5,4,brianairb85
+Caldera Rose Petal (Kettle Series),61427,1075,6.70,American Blonde Ale,3,2,2,1.5,1.5,jmarsh123
+Caldera Rose Petal (Kettle Series),61427,1075,6.70,American Blonde Ale,3.5,3.5,3,3.5,3,BDTyre
+Caldera Rose Petal (Kettle Series),61427,1075,6.70,American Blonde Ale,3,1.5,2,1.5,1.5,TheGordianKnot
+Caldera Rose Petal (Kettle Series),61427,1075,6.70,American Blonde Ale,4.5,3,3,3.5,4,hippityhops85
+Caldera Rose Petal (Kettle Series),61427,1075,6.70,American Blonde Ale,3.5,3.5,3.5,3.5,3.5,JohnGalt1
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,3.5,4,Rutager
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,CHILLINDYLAN
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4.5,beerman207
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,Mora2000
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,3.5,3.5,3.5,grover37
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4.5,4.5,alabamatie
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4.5,bagpiper2005
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,4.5,4,LukeD23
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,JayQue
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,4,3.5,4,PhageLab
+Caldera IPA,10784,1075,6.10,American IPA,5,4,4,4,5,lnashsig
+Caldera IPA,10784,1075,6.10,American IPA,5,4.5,4,5,4,mindlucent2007
+Caldera IPA,10784,1075,6.10,American IPA,4.5,3.5,4,4,4,AlCaponeJunior
+Caldera IPA,10784,1075,6.10,American IPA,4,3,3,3,4,corby112
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,3.5,3.5,4,BEERchitect
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4.5,4,Jayli
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,3.5,3.5,LilBeerDoctor
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,clayrock81
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,4,4,lstokes
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,4,4.5,4.5,kylejohnson03
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,3.5,4,csiewert
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,beerphan
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4.5,climax
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4.5,4.5,JoEBoBpr
+Caldera IPA,10784,1075,6.10,American IPA,4,2.5,3,3,3,OWSLEY069
+Caldera IPA,10784,1075,6.10,American IPA,5,4,4,4,4,AEK
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4.5,4.5,4.5,TheManiacalOne
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,4,4.5,awalk1227
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,3.5,4,BuckyFresh
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4,SamuelJackson45
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4,4,djbreezy
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4.5,4.5,5,wcudwight
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4,4,JoeyBeerBelly
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,5,DeanMoriarty
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,3.5,4,xnicknj
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3.5,3.5,3.5,3.5,northyorksammy
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3.5,4,4,2.5,Bfarr
+Caldera IPA,10784,1075,6.10,American IPA,3.5,2.5,3.5,4.5,3.5,crossovert
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,emmasdad
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,3.5,3.5,DoubleJ
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4.5,4.5,Beerenauslese
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4,chumba526
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4.5,4,merlin48
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3,4,3.5,3.5,htomsirveaux
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,3,4.5,4,cvaypai
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,3.5,4,4,elgiacomo
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,4,4.5,4.5,cbak999
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,pigdog
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3.5,4,4,4.5,irishgurl4
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,3.5,4,barleywinefiend
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,4,4,charmcityboh
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,seedsofchaos
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4,4,Ryan011235
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4,5,samie85
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,3.5,4,4.5,StaveHooks
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,Brent
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,thecarster1
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,4,5,4.5,GarrettMD
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,3.5,4,leedorham
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,3.5,4,hawks10
+Caldera IPA,10784,1075,6.10,American IPA,5,4,4.5,4,4,Bubba83
+Caldera IPA,10784,1075,6.10,American IPA,4.5,3.5,3.5,4,4,JTahoe
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4.5,5,5,JohnQVegas
+Caldera IPA,10784,1075,6.10,American IPA,4,3,3,2.5,3,philbertk
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,4.5,4,sliverX
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,bump8628
+Caldera IPA,10784,1075,6.10,American IPA,4.5,5,4,4,4.5,bridgetowhophead
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4.5,4.5,TheHungryHiker
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4.5,4.5,nc41
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,4,4.5,4.5,btorsdog
+Caldera IPA,10784,1075,6.10,American IPA,5,3.5,4,4.5,4.5,BrewsB4Shrews
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,3.5,Beerandraiderfan
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,4,4,jzeilinger
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,3.5,3.5,BlackHaddock
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,4,4,gatornation
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,BeerAdvocate
+Caldera IPA,10784,1075,6.10,American IPA,3,3,3,3,3,beertunes
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,squaremile
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,4,4,mikereaser
+Caldera IPA,10784,1075,6.10,American IPA,3,3.5,4,3.5,4,thagr81us
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4.5,4.5,4.5,brauseboof
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4.5,4.5,4.5,4.5,trevorjn06
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,4.5,4.5,4,therica
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,3.5,4.5,zoso1967
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,4,4.5,4,WYVYRN527
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,3.5,3.5,barleywinefiend
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,3.5,4,4,kiddynamite920
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,4,5,4.5,olmatty
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,4.5,4,4,scottyshades
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,4,4,4.5,BigMike
+Caldera IPA,10784,1075,6.10,American IPA,4.5,5,3.5,4.5,5,Freethyhops
+Caldera IPA,10784,1075,6.10,American IPA,4.5,5,4.5,4.5,5,wolfinthemirror
+Caldera IPA,10784,1075,6.10,American IPA,3.5,2.5,4,4,3.5,ktrillionaire
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4.5,oregonskibum
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4.5,thain709
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,4,3.5,kkipple
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4,gatorbreath
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,4,4,branimal9
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4,Akfan
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,5,5,4.5,cdizinno
+Caldera IPA,10784,1075,6.10,American IPA,5,4,4,4.5,4.5,MacQ32
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,3.5,4.5,4,beerdedking
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,3.5,3.5,Finatic
+Caldera IPA,10784,1075,6.10,American IPA,5,5,5,5,5,vicsju1991
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4,4,dbossman
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,3.5,3.5,HOPPYKC
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,4,4,TheFightfan1
+Caldera IPA,10784,1075,6.10,American IPA,3,3.5,4,4,4.5,drewba
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4,coldriver
+Caldera IPA,10784,1075,6.10,American IPA,4,5,4,4.5,5,IPAguy2009
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4.5,4,4.5,Tilley4
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4.5,4.5,AlexJ
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4.5,4,4.5,avalon07
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,3.5,4,jpro
+Caldera IPA,10784,1075,6.10,American IPA,4.5,3,3.5,4,4,mdcrouser
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4.5,kylehayworth
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,Kadonny
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4,4,RomaniIteDomum
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,indiapaleale
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4,4,armock
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4.5,4,4.5,4.5,Cresant
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4.5,4,biggred1
+Caldera IPA,10784,1075,6.10,American IPA,4,4,2,2,1,ShadesOfGray
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,3.5,jlindros
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4.5,4,4.5,Casey10
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4.5,WesWes
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3.5,3.5,3.5,4,PeteVenkman
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,callmemickey
+Caldera IPA,10784,1075,6.10,American IPA,5,4,4,4.5,4,hoppyhobby
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4.5,4,4,Philabeerphia
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,3.5,4,ClockworkOrange
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4,4,iasanlee
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3.5,4,4,4,MURF0320
+Caldera IPA,10784,1075,6.10,American IPA,4.5,2.5,3.5,3,3,organicbrewer
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,onix1agr
+Caldera IPA,10784,1075,6.10,American IPA,4,3,4,3.5,4,SpeedwayJim
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,4,4,Lunch
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,bamadog
+Caldera IPA,10784,1075,6.10,American IPA,4.5,3.5,4,4,4.5,augustgarage
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,4,4,4.5,jwc215
+Caldera IPA,10784,1075,6.10,American IPA,5,4,4,4.5,4.5,dedrinker
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,5,Gyle41386
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4.5,4,4,ShogoKawada
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3.5,4,3.5,4,alleykatking
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4.5,3.5,4,berebrando
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,3.5,3.5,Overlord
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4,4.5,RedBrewer83
+Caldera IPA,10784,1075,6.10,American IPA,4.5,5,3.5,4.5,4.5,womencantsail
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,4,4,4,slayer3604
+Caldera IPA,10784,1075,6.10,American IPA,4,5,4.5,4.5,4.5,jctribe25
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4.5,4,3.5,hooliganlife
+Caldera IPA,10784,1075,6.10,American IPA,4,3,4.5,4.5,4.5,raverjames
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3.5,3.5,3.5,4,JohnGalt1
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,3.5,4,kels
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,3,3.5,callmescraps
+Caldera IPA,10784,1075,6.10,American IPA,4,5,4,5,5,woodychandler
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,Primitivechef
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,3.5,4.5,BevMoAndrew
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,3,3.5,mugglesandhops
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,Finn
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4.5,4,drabmuh
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,4,3.5,Schmaltzy
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,nickd717
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4.5,glid02
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4.5,4.5,RoyalT
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4,4,mikey711
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4.5,snaotheus
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,4,4.5,Deuane
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,5,5,5,Stimwizzle
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4,4.5,Slatetank
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,3.5,4,4,wmthorne
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,4.5,4,4.5,mbunje
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,3.5,3.5,3.5,WeisGuy
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,4.5,3.5,3.5,Genghis22
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,3.5,4,Halcyondays
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4.5,hckyfn9999
+Caldera IPA,10784,1075,6.10,American IPA,3,3.5,4,3.5,3.5,HalfFull
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,mdagnew
+Caldera IPA,10784,1075,6.10,American IPA,4,3,3,3,2.5,vacax
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4.5,4,4.5,Imstillthegman
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,4.5,4,qchic
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3.5,3.5,3,3,mjl21
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,3.5,4,3.5,cerveza5150
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,5,5,beerswamie
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,4,4.5,Metalmonk
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,4,4.5,4.5,webbcreative
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4,Tdizzle
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,d0ggnate
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,3,3,2,velosuds
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4.5,4,3.5,3.5,argock
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3,3.5,3.5,4,Docer
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4.5,jackorain
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,3.5,3.5,BeerBelcher
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,4.5,4.5,czechsaaz
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,3.5,4,meatyard
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4.5,PDXHops
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4,4.5,tronester
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,Seanibus
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4.5,4,4,philbe311
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,3.5,4,3.5,macktbone
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,ckeegan04
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4.5,mikesgroove
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,washburnkid
+Caldera IPA,10784,1075,6.10,American IPA,4,3,3,3.5,2,Arbitrator
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,3.5,4,tempest
+Caldera IPA,10784,1075,6.10,American IPA,4.5,5,4.5,5,5,jfitzy78
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,4,4,skrib09
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,4.5,4.5,4,mcsquint
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,Goliath
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4.5,4,3.5,erikm25
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,4,4,4,Rhettroactive
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,2.5,3,3.5,HosP
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3.5,3.5,3.5,3.5,TheGordianKnot
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,4,4,comfortablynumb1
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4,tdm168
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,4,3.5,3,Teleweizen2
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,3.5,4,ColForbinBC
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,4,4,bosox941827
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,4,4,doopydoogle
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4.5,4,wedge
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,3,3.5,3,Risser09
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4,4.5,errantnight
+Caldera IPA,10784,1075,6.10,American IPA,5,3.5,3.5,4,4,wnh
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,3.5,4.5,3.5,stephens101
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3.5,4,4.5,4,akorsak
+Caldera IPA,10784,1075,6.10,American IPA,4,5,4,3,3,madtappers
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4.5,4,dukew456
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4,sholland119
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4,beer2day
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,zeff80
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,HairOfTh3Dog
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,dirtylou
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4,4.5,naterock
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4.5,4.5,SpecialK088
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,jdense
+Caldera IPA,10784,1075,6.10,American IPA,5,5,4.5,5,4.5,dakid618
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,4,3.5,Kraken
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4,Tone
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,3.5,4,4.5,Monkeyknife
+Caldera IPA,10784,1075,6.10,American IPA,4.5,3.5,4,4,4.5,HopDerek
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,4,3.5,dyan
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,4,4,3.5,gabeerfan
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,pinotboy007
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,5,5,mtrentm
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,blackie
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,4,4.5,jdoncbus
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,3.5,4.5,4,Jimbo87
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4,4.5,BeerSox
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,bbothen
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,Kegatron
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4,aforbes10
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,3.5,4,3,Proteus93
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4,4.5,timtim
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,3.5,4,4,hopdog
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4.5,gford217
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4.5,4.5,Chelsea1905
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4,MisterClean
+Caldera IPA,10784,1075,6.10,American IPA,4.5,5,4,4.5,4.5,maximum12
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,ThirstyHopHead
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4.5,4.5,4.5,DrDogbeer
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,3.5,4,ArrogantB
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,3.5,3.5,Gueuzedude
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4,4.5,pjwilson
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,3.5,3.5,4,koopa
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,5,4.5,4.5,DIM
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,GbVDave
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,CrellMoset
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4,4.5,AKBelgianBeast
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3.5,4,4,4,beereality
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,4,4,4,tpd975
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4,Wetpaperbag
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,mnapier
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4.5,4.5,4.5,largadeer
+Caldera IPA,10784,1075,6.10,American IPA,4,4,5,4.5,4.5,RedDiamond
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4,MiguelMandingo
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4.5,JDV
+Caldera IPA,10784,1075,6.10,American IPA,4.5,3.5,3.5,3,3.5,woemad
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,3.5,4,3.5,cjgator3
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4.5,4,4,cburian
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,kirok1999
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4.5,4.5,Wasatch
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4,4,MuenchenerKindl
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,5,libertygrails
+Caldera IPA,10784,1075,6.10,American IPA,3,3.5,3.5,3.5,3.5,ccrida
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,4,3.5,BeerZack
+Caldera IPA,10784,1075,6.10,American IPA,3,2.5,4,4.5,4.5,brentk56
+Caldera IPA,10784,1075,6.10,American IPA,5,3.5,4.5,4,4,russpowell
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,3.5,4,4,Spikester
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,3.5,3.5,seaoflament
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,4,4,4,flexabull
+Caldera IPA,10784,1075,6.10,American IPA,3.5,2,3,3,3,Reidrover
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,2,2,1.5,PhxHorn
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,4.5,4.5,4.5,WVbeergeek
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4.5,4.5,4.5,unclederby
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,5,4,SurlyDuff
+Caldera IPA,10784,1075,6.10,American IPA,3,3.5,3,3.5,3,Dubbercody
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,3.5,3.5,ChainGangGuy
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,4,4,Floydster
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4.5,BuckeyeNation
+Caldera IPA,10784,1075,6.10,American IPA,5,4,4,4,4,Bierguy5
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,3,3.5,4.5,blakesell
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,3,3.5,4,mcallister
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,4,4,4,cswhitehorse
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,3.5,3.5,4,weeare138
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4,msubulldog25
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4.5,4.5,kevinmkirk
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4,genog
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,5,4.5,4.5,franksnbeans
+Caldera IPA,10784,1075,6.10,American IPA,4.5,3.5,5,4.5,4.5,ElGordo
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,bootylicious
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,3.5,Redrover
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,Klym
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4,BerkeleyBeerMan
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,3.5,4,4,9InchNails
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,5,4.5,kingjames1
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4,Hopfenpeter
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,4,4,Tucquan
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,4.5,4.5,4.5,jtd1969
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4.5,4,ReelBigwigFish
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4.5,4,peabody
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,3.5,4,4,dcloeren
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4,jeff1973
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,3.5,4,BrewerB
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,4,4,KMcG
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4.5,4.5,unionturf
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,5,4,3.5,LSUPT
+Caldera IPA,10784,1075,6.10,American IPA,4,3,3,3,3,sendsilk
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4,NStLincoln
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3,3,3.5,harrymel
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3.5,3.5,3.5,3,Phelps
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3,3,3,Alieniloquium
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3.5,3.5,3.5,3.5,HopDiggityDawg
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4.5,4,4,4.5,CuttDeez
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,3.5,4,4,Knapp85
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4.5,SaCkErZ9
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4.5,4.5,4.5,Jenkster4
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,3,3,tone77
+Caldera IPA,10784,1075,6.10,American IPA,3.5,3.5,4,4,4,litheum94
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4.5,4,4,Yagman3000
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4.5,4,4,4,cbros
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,3,3,seeswo
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4,4,Georgiabeer
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,oberon
+Caldera IPA,10784,1075,6.10,American IPA,4.5,3.5,4,3.5,4,IronLover
+Caldera IPA,10784,1075,6.10,American IPA,3,4.5,4,5,4.5,chocosushi
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4,4,Thorpe429
+Caldera IPA,10784,1075,6.10,American IPA,4,3,3.5,3.5,3,tripelhops
+Caldera IPA,10784,1075,6.10,American IPA,4,5,4,4.5,4.5,Schmit
+Caldera IPA,10784,1075,6.10,American IPA,4,3,4,3.5,4,beagle75
+Caldera IPA,10784,1075,6.10,American IPA,4.5,3,3.5,3,3.5,biglobo8971
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,3.5,3.5,NWer
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4,4,Dope
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4,seans86
+Caldera IPA,10784,1075,6.10,American IPA,5,4.5,4,4,4,chugalug06
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4.5,4.5,JCaweinstein
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4,4,bluejacket74
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4.5,4,felipe2toes
+Caldera IPA,10784,1075,6.10,American IPA,4,5,4,4,4.5,Nugganooch
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,4,4,zoolzoo
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,4,4,MaltsOfGlory
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4.5,4.5,robbrandes
+Caldera IPA,10784,1075,6.10,American IPA,4,4,3.5,4,4,rootbeerman
+Caldera IPA,10784,1075,6.10,American IPA,3.5,4,4,5,4,dubinsky
+Caldera IPA,10784,1075,6.10,American IPA,5,4,4,4,4,TheSarge
+Caldera IPA,10784,1075,6.10,American IPA,4,3,3.5,4,3.5,thebeerisgood
+Caldera IPA,10784,1075,6.10,American IPA,5,4,4,4.5,4.5,richkrull
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,3.5,4,colts9016
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,4,4,4,shand
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4.5,4.5,haddon
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4.5,4,FosterJM
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,3.5,4,4.5,itsfreeasinbeer
+Caldera IPA,10784,1075,6.10,American IPA,3,3.5,3,2.5,4,generalnotsew
+Caldera IPA,10784,1075,6.10,American IPA,4,4.5,3.5,3.5,4,betsona
+Caldera IPA,10784,1075,6.10,American IPA,4.5,4,4,4.5,4,whatthehull
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,3.5,4.5,Scotchboy
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4.5,4,4,StoneTSR
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4.5,3.5,4,notchucknorris
+Caldera IPA,10784,1075,6.10,American IPA,4,4,4,4,4.5,portia99
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,4,4,4,u2carew
+Caldera IPA,10784,1075,6.10,American IPA,3,2.5,3,2.5,3,goldbot
+Caldera IPA,10784,1075,6.10,American IPA,4,3.5,3.5,4,4,Crabbicuss
+Coconut Porter,76963,1075,9.50,American Porter,4,4,3.5,4,4,Rifugium
+Dry Hop Orange,23290,1075,5.60,American Amber / Red Ale,4,4,4,4,4,Beerandraiderfan
+Dry Hop Orange,23290,1075,5.60,American Amber / Red Ale,4,4.5,4.5,4.5,4,Bliss
+Dry Hop Orange,23290,1075,5.60,American Amber / Red Ale,4,4,3.5,4,4,css82420
+Dry Hop Orange,23290,1075,5.60,American Amber / Red Ale,4,4,3.5,4,4,msubulldog25
+Dry Hop Orange,23290,1075,5.60,American Amber / Red Ale,3.5,3.5,3,3.5,3.5,Reidrover
+Dry Hop Orange,23290,1075,5.60,American Amber / Red Ale,3,3.5,3.5,3.5,3.5,charlatan
+Alpha Beta,54723,1075,,American IPA,4,4,4,4,4,plaid75
+Caldera Pilsener Bier,3274,1075,5.20,German Pilsener,4,4,3,3,3,RedDiamond
+Caldera Pilsener Bier,3274,1075,5.20,German Pilsener,5,4,4,4.5,4.5,venneman
+Hibiscus Ginger Beer,60951,1075,4.70,Fruit / Vegetable Beer,3,3.5,2.5,3,2.5,cbarrett4
+Exotic Erotic Passion Fruit Ale,37917,1075,5.00,Fruit / Vegetable Beer,3,3.5,4,3.5,3.5,ccrida
+Hopportunity Knocks,56071,1075,6.80,American IPA,4.5,4,4.5,4,4,beer2day
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,4.5,4,4.5,4,whatthehull
+Hopportunity Knocks,56071,1075,6.80,American IPA,3.5,3,3.5,4,4,Satchboogie
+Hopportunity Knocks,56071,1075,6.80,American IPA,3,2,1.5,1.5,1.5,barleywinefiend
+Hopportunity Knocks,56071,1075,6.80,American IPA,4.5,3,4,3.5,3.5,titosupertramp
+Hopportunity Knocks,56071,1075,6.80,American IPA,4.5,3.5,4,3.5,3.5,oberon
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,2,4,4,4,nc41
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3.5,4.5,3.5,4,flexabull
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3.5,3.5,3,3,FanofHefe
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3,3.5,3,3,Tilley4
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,4,4,3.5,4,Knapp85
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3.5,4,3.5,3.5,brentk56
+Hopportunity Knocks,56071,1075,6.80,American IPA,3.5,3,3.5,3,3,TheWhiskerReview
+Hopportunity Knocks,56071,1075,6.80,American IPA,3.5,3.5,3.5,4,3.5,NorCalYeti
+Hopportunity Knocks,56071,1075,6.80,American IPA,3.5,3,2,2,2,Alieniloquium
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3.5,3.5,3,3,mactrail
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3,4,3,3.5,beagle75
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3,3.5,3,3,CliffBrake
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,2,3,2,2,ggroller
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,4,4,4,4,Rutager
+Hopportunity Knocks,56071,1075,6.80,American IPA,3.5,3.5,3.5,4,3.5,cjgator3
+Hopportunity Knocks,56071,1075,6.80,American IPA,3.5,4,4,4,4,Reidrover
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3.5,4,4,4,cbak999
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,4,4,4,3.5,GarthDanielson
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3.5,3.5,4,4,RoyalT
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,2.5,3,2.5,4,youradhere
+Hopportunity Knocks,56071,1075,6.80,American IPA,4.5,4,4.5,4.5,4.5,JeffBob
+Hopportunity Knocks,56071,1075,6.80,American IPA,4.5,3.5,4,3.5,3.5,TCHopCraver
+Hopportunity Knocks,56071,1075,6.80,American IPA,3,3,3.5,3.5,3,chumba526
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3.5,4,4,3.5,BuckyFresh
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3.5,4,4,4.5,Chelsea1905
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,4,4,4,4,Beerandraiderfan
+Hopportunity Knocks,56071,1075,6.80,American IPA,3,3,3,3,3,RonfromJersey
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3.5,3,3.5,3.5,Docer
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,4,4,4,4,GreenCard
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3.5,4,3.5,3.5,Reagan1984
+Hopportunity Knocks,56071,1075,6.80,American IPA,4.5,2,4.5,3,2.5,djmichaelk
+Hopportunity Knocks,56071,1075,6.80,American IPA,3.5,3.5,4,3.5,3.5,JohnGalt1
+Hopportunity Knocks,56071,1075,6.80,American IPA,4.5,4,3.5,3.5,3.5,billshmeinke
+Hopportunity Knocks,56071,1075,6.80,American IPA,4.5,3.5,4.5,4,4,rand
+Hopportunity Knocks,56071,1075,6.80,American IPA,3.5,3.5,3,2.5,3,BrewsB4Shrews
+Hopportunity Knocks,56071,1075,6.80,American IPA,4.5,3.5,4,4.5,4,ShogoKawada
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,2,2.5,3,3,ktrillionaire
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3.5,3.5,4,4,Gobzilla
+Hopportunity Knocks,56071,1075,6.80,American IPA,4.5,4,4,4,3.5,augustgarage
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,4,3.5,4,4,jdense
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,4,4,4,4,jorg2619
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,4,4,4,4,brewandbbq
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3.5,4,3.5,3.5,SpdKilz
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,4,3.5,3.5,3.5,Halcyondays
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,4,4,3.5,4,ClockworkOrange
+Hopportunity Knocks,56071,1075,6.80,American IPA,4.5,4,4,4,3.5,zoso1967
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,4,3.5,3.5,3.5,ccrida
+Hopportunity Knocks,56071,1075,6.80,American IPA,4.5,3,4,3.5,4,vince4953529
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,3.5,3,3.5,3,mpensworth
+Hopportunity Knocks,56071,1075,6.80,American IPA,4.5,4,4,4,4,Spikester
+Hopportunity Knocks,56071,1075,6.80,American IPA,4,4,4,4,4,cswhitehorse
+Hopportunity Knocks,56071,1075,6.80,American IPA,4.5,4,4,5,5,kevinmkirk
+Imperial Stout,42964,1075,,American Double / Imperial Stout,4,4.5,4,4.5,4.5,grumpy
+Cauldron Brew,10793,1075,7.60,American Strong Ale,4.5,4,4.5,5,5,freed
