@@ -1,19 +1,25 @@
 # loading depedencies
-import unittest
+import unittest, sys
+
 # list of nose.tools can be found at https://nose.readthedocs.org/en/latest/testing_tools.html
-from nose.tools import assert_equal, assert_not_equal, assert_raises
+from nose.tools import assert_equal, assert_not_equal
 
-# load the stub script to test
-# this is to be replaced with the actual functions later on
-from stubs import dummyscript
+# in order to access objects in server.py
+sys.path.insert(0, '../')
+import server
+
+class Unit_Test():
+
+  @classmethod
+  def setup_class(klass):
+    print "running unit tests for: ", klass
+
+  def test_recommend(self):
+    result = server.get_recommendation('something')
+    assert_equal(result['beer_id'], 123)
+
+  def test_somethingelse(self):
+    result = server.get_recommendation('something')
+    assert_not_equal(1234, 123)
 
 
-def test_csv():
-  beers = ["Dale's Pale Ale", "Sierra Nevada Pale Ale"]
-  unittest = dummyscript.calculate_similarity(beers[0], beers[1])
-  assert_equal(type(unittest),'number')
-  # assert_equal(unittest,)
-
-def setup_module(module):
-    print ("") # this is to get a newline after the dots
-    print ("setup_module before anything in this file")
