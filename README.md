@@ -1,12 +1,12 @@
-# Project Name
+# Next Beer
 
-> Pithy project description
+> Recommendation app that gives beer suggestions and pairing recommendations
 
 ## Team
 
-  - __Product Owner__: teamMember
-  - __Scrum Master__: teamMember
-  - __Development Team Members__: teamMember, teamMember
+  - __Product Owner__: Neil Lobo
+  - __Scrum Master__: Boris Verkhovskiy
+  - __Development Team Members__: Caly Moss, DH Lee
 
 ## Table of Contents
 
@@ -24,23 +24,33 @@
 
 ## Requirements
 
-- Node 0.10.x
-- Redis 2.6.x
-- Postgresql 9.1.x
-- etc
-- etc
+
 
 ## Development
 
 ### Installing Dependencies
 
-From within the root directory:
+
+We use virtualenv to manage dependencies in the npm fashion
+
+If you want to install all dependencies,
 
 ```sh
-sudo npm install -g bower
-npm install
-bower install
+pip install virtualenv
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ```
+
+If you want to add a new dependency,
+
+```sh
+pip install new_package_name
+pip freeze > requirements.txt
+```
+
+Now the newly installed package will be automatically added to the requirements.txt
+
 
 ### Tasks
 
