@@ -22,4 +22,8 @@ class Unit_Test():
     result = server.get_recommendation('something')
     assert_not_equal(1234, 123)
 
+  def test_somethingelse2(self):
+    result = server.get_recommendation('22222')
+    assert_not_equal(1455, 123)
+
 
