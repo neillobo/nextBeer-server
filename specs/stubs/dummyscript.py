@@ -28,9 +28,10 @@ def reformat_to_csv():
       outfile.write(new_review + '\n')
 
 
-def read_csv():
-  return pd.read_csv("./beer_reviews/beer_reviews.csv",error_bad_lines=False)
+def read_csv(file_path):
+  return pd.read_csv(file_path, error_bad_lines=False)
 
+df = read_csv("./beer_reviews/beer_reviews.csv")
 
 def find_common_reviewers(beer_1, beer_2):
   beer_1_reviewers = df[df.beer_name==beer_1].review_profilename.unique()

@@ -5,7 +5,7 @@ from nose.tools import assert_equal, assert_not_equal, assert_raises
 
 # load the stub script to test
 # this is to be replaced with the actual functions later on
-import stubs.dummyscript
+from stubs import dummyscript
 
 
 def test_csv():
@@ -14,4 +14,6 @@ def test_csv():
   assert_equal(type(unittest),'number')
   # assert_equal(unittest,)
 
-
+def setup_module(module):
+    print ("") # this is to get a newline after the dots
+    print ("setup_module before anything in this file")
