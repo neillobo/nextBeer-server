@@ -1,6 +1,7 @@
 #!flask/bin/python
 import os
 from flask import Flask, jsonify, request
+import sqlite3
 
 try:
     # this is how you would normally import
@@ -11,29 +12,36 @@ except:
 
 app = Flask(__name__)
 
-def get_recommendation(user_id):
-    # do we send them the picture
-    return {'beer_id': 123, 'beer_name': 'Asdf Beer', 'beer_description': 'it\'s beer man'}
+def get_recommendations(beer_id):
+    db_connection = sqlite3.connect('beer_distances.db')
+    c = db_connection.cursor()
+    beers = [row for row in c.execute('SELECT * FROM distances WHERE beer1_id=?', (beer_id,))]
+    if not len(beers): print 'ERROR: no beers found for recomendation', beer_id
+    beers = sorted(beers, key=lambda x: x[2])
+    results = []
+    for beer1_id, beer2_id, dist in beers[:10]: # top 10 beers
+        name = c.execute('SELECT beername FROM beernames WHERE beer_id=?', (beer2_id,))
+        results.append([name.next()[0], dist])
+    print results
+    db_connection.close()
+    return results
+
 
 def add_to_profile(user_id, beer_id, beer_rating):
     pass
 
-@app.route('/')
-def hello():
-    return 'Hello World!'
+@app.route('/api/v1/<beer_id>', methods = ['GET'])
+def respond(beer_id):
+    # recommends a similar beer from a get request
+    return jsonify( { 'recomendations': get_recommendations(beer_id) } )
 
-@app.route('/api/v1/', methods = ['GET', 'POST'])
-@cross_origin(headers=['Content-Type'])
-def respond():
-    print request.headers
+# cant have both
+# @app.route('/api/v1/', methods = ['POST'])
+# def respond(beer_id):
+#     # recommends a similar beer based on values in a post request
+#     print request
+#     return jsonify( { 'recomendations': get_recommendations(beer_id) } )
 
-    # from request
-    unique_id = 1234
-    beer_id = 4321
-    beer_rating = 1
-
-    add_to_profile(unique_id, beer_id, beer_rating)
-    return jsonify( { 'recomendation': get_recommendation(unique_id) } )
 
 if __name__ == '__main__':
     app.run(debug = True)
