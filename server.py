@@ -1,4 +1,5 @@
 #!flask/bin/python
+import os
 from flask import Flask, jsonify, request
 
 try:
@@ -17,7 +18,11 @@ def get_recommendation(user_id):
 def add_to_profile(user_id, beer_id, beer_rating):
     pass
 
-@app.route('/api/v1/', methods = ['GET'])
+@app.route('/')
+def hello():
+    return 'Hello World!'
+
+@app.route('/api/v1/', methods = ['GET', 'POST'])
 @cross_origin(headers=['Content-Type'])
 def respond():
     print request.headers
@@ -28,7 +33,9 @@ def respond():
     beer_rating = 1
 
     add_to_profile(unique_id, beer_id, beer_rating)
-    return jsonify( { 'recomendation': get_next_recommendation(unique_id) } )
+    return jsonify( { 'recomendation': get_recommendation(unique_id) } )
 
 if __name__ == '__main__':
     app.run(debug = True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
