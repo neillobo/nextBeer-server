@@ -1,6 +1,13 @@
 #!flask/bin/python
 from flask import Flask, jsonify, request
 
+try:
+    # this is how you would normally import
+    from flask.ext.cors import cross_origin
+except:
+    # support local usage without installed package
+    from flask_cors import cross_origin
+
 app = Flask(__name__)
 
 def get_recommendation(user_id):
@@ -11,6 +18,7 @@ def add_to_profile(user_id, beer_id, beer_rating):
     pass
 
 @app.route('/api/v1/', methods = ['GET'])
+@cross_origin(headers=['Content-Type'])
 def respond():
     print request.headers
 
