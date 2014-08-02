@@ -31,17 +31,10 @@ def add_to_profile(user_id, beer_id, beer_rating):
     pass
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
+@cross_origin()
 def respond(beer_id):
     # recommends a similar beer from a get request
     return jsonify( { 'recomendations': get_recommendations(beer_id) } )
-
-# cant have both
-# @app.route('/api/v1/', methods = ['POST'])
-# def respond(beer_id):
-#     # recommends a similar beer based on values in a post request
-#     print request
-#     return jsonify( { 'recomendations': get_recommendations(beer_id) } )
-
 
 if __name__ == '__main__':
     app.run(debug = True)
