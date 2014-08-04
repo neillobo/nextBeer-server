@@ -14,8 +14,8 @@ except:
 
 from flask.ext.sqlalchemy import SQLAlchemy
 
-    
-    
+
+
 
 app = Flask(__name__)
 
@@ -24,6 +24,12 @@ db = SQLAlchemy(app)
 
 db.create_all()
 class User(db.Model):
+    """
+    this string should explain what this class is for
+    describe why this function exists
+    what it does should be self-explanatory
+    definitely a good practice to enforce
+    """
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80))
     email = db.Column(db.String(120), unique=True)
@@ -35,9 +41,13 @@ class User(db.Model):
     def __repr__(self):
             return '<Name %r>' % self.name
 
-
-
-def get_next_recommendation(beer_id):
+# utility functions
+# these could live in a separate file and be imported here
+def run_query(query_string, data):
+    """
+    describe why this function exists
+    what it does should be self-explanatory
+    """
     db_connection = sqlite3.connect('beer_distances.db')
     c = db_connection.cursor()
     result = list(c.execute(query_string, (data,)))
@@ -45,16 +55,22 @@ def get_next_recommendation(beer_id):
     return result
 
 def get_nearest_beers(beer_id, num=10):
+    """
+    describe why this function exists
+    what it does should be self-explanatory
+    """
     beers = run_query('SELECT * FROM distances WHERE beer1_id=?', beer_id)
     beers.sort(key=lambda x: x[2])
 
     if not beers:
         print 'ERROR: no beers found for id', beer_id
-
     return beers[:num]
 
-
 def get_metadata(beer_id):
+    """
+    describe why this function exists
+    what it does should be self-explanatory
+    """
     name = run_query('SELECT beername FROM beernames WHERE beer_id=?', beer_id)
 
     metadata = {'name': name[0][0]} # leaving room for description, image etc.
@@ -62,6 +78,10 @@ def get_metadata(beer_id):
     return metadata
 
 def get_next_recommendation(beer_id):
+    """
+    describe why this function exists
+    what it does should be self-explanatory
+    """
     top_beers = get_nearest_beers(beer_id)
     if top_beers:
         top_beer = top_beers[0]
@@ -89,11 +109,12 @@ def try_postgres():
 
     all_users = User.query.all()
     return all_users
-    
+
 
 def add_to_profile(user_id, beer_id, beer_rating):
     pass
 
+# flask url decorators
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
 @cross_origin()
 def respond(beer_id):

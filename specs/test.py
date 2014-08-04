@@ -9,24 +9,25 @@ sys.path.insert(0, os.getcwd())
 import server
 
 class Unit_Test():
-
   @classmethod
   def setup_class(klass):
     print "running unit tests for: ", klass
 
   def test_recommend(self):
-    result = server.get_next_recommendation('something')
-    assert_equal(result['beer_id'], 123)
+    # beer 1
+    result = server.get_next_recommendation(1)
+    assert_equal(type(result['name']) is str, true)
 
-  def test_somethingelse(self):
-    result = server.get_next_recommendation('something')
-    assert_not_equal(1234, 123)
+  # # the following are test examples
+  # def test_somethingelse(self):
+  #   result = server.get_next_recommendation('something')
+  #   assert_not_equal(1234, 123)
 
-  def test_somethingelse2(self):
-    result = server.get_next_recommendation('22222')
-    assert_not_equal(1455, 123)
+  # def test_somethingelse2(self):
+  #   result = server.get_next_recommendation('22222')
+  #   assert_not_equal(1455, 123)
 
-  def test_somethingelse3(self):
-    result = server.get_next_recommendation('22222')
-    assert_not_equal(dfdsff, 123)
+  # def test_somethingelse3(self):
+  #   result = server.get_next_recommendation('22222')
+  #   assert_not_equal(dfdsff, 123)
 
