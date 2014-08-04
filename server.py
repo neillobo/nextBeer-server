@@ -11,9 +11,17 @@ except ImportError:
     # support local usage without installed package
     from flask_cors import cross_origin
 
+from flask.ext.sqlalchemy import SQLAlchemy
+
+    
+    
+
 app = Flask(__name__)
 
-def run_query(query_string, data):
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+db = SQLAlchemy(app)
+
+def get_next_recommendation(beer_id):
     db_connection = sqlite3.connect('beer_distances.db')
     c = db_connection.cursor()
     result = list(c.execute(query_string, (data,)))
@@ -45,6 +53,22 @@ def get_next_recommendation(beer_id):
         return get_metadata(recommended_beer_id)
     else:
         return {}
+
+# def try_postgres:
+#     urlparse.uses_netloc.append("postgres")
+#     url = urlparse.urlparse(os.environ["DATABASE_URL"])
+
+#     conn = psycopg2.connect(
+#     database=url.path[1:],
+#     user=url.username,
+#     password=url.password,
+#     host=url.hostname,
+#     port=url.port
+#     )
+
+def try_postgres:
+    return
+    
 
 def add_to_profile(user_id, beer_id, beer_rating):
     pass
