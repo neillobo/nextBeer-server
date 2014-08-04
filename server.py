@@ -24,8 +24,8 @@ def get_next_recommendation(beer_id):
         return {}
 
     results = []
-    beer1_id, beer2_id, dist = beers[0] # return top closest beer
-    name = c.execute('SELECT beername FROM beernames WHERE beer_id=?', (beer2_id,))
+    recommended_beer_id = beers[0][1] # return top closest beer
+    name = c.execute('SELECT beername FROM beernames WHERE beer_id=?', (recommended_beer_id,))
     results = {"name": name.next()[0]} # leaving room for description, image etc.
 
     db_connection.close()
