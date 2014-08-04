@@ -11,25 +11,38 @@ except ImportError:
 
 app = Flask(__name__)
 
-def get_next_recommendation(beer_id):
+def run_query(query_string, data):
     db_connection = sqlite3.connect('beer_distances.db')
     c = db_connection.cursor()
-
-    beers = c.execute('SELECT * FROM distances WHERE beer1_id=?', (beer_id,))
-    beers = sorted(beers, key=lambda x: x[2])
-
-    if not len(beers):
-        print 'ERROR: no beers found for id', beer_id
-        return {}
-
-    results = []
-    recommended_beer_id = beers[0][1] # return top closest beer
-    name = c.execute('SELECT beername FROM beernames WHERE beer_id=?', (recommended_beer_id,))
-    results = {"name": name.next()[0]} # leaving room for description, image etc.
-
+    result = list(c.execute(query_string, (data,)))
     db_connection.close()
-    return results
+    return result
 
+def get_nearest_beers(beer_id, num=10):
+    beers = run_query('SELECT * FROM distances WHERE beer1_id=?', beer_id)
+    beers.sort(key=lambda x: x[2])
+
+    if not beers:
+        print 'ERROR: no beers found for id', beer_id
+
+    return beers[:num]
+
+
+def get_metadata(beer_id):
+    name = run_query('SELECT beername FROM beernames WHERE beer_id=?', beer_id)
+
+    metadata = {'name': name[0][0]} # leaving room for description, image etc.
+
+    return metadata
+
+def get_next_recommendation(beer_id):
+    top_beers = get_nearest_beers(beer_id)
+    if top_beers:
+        top_beer = top_beers[0]
+        recommended_beer_id = top_beer[1]
+        return get_metadata(recommended_beer_id)
+    else:
+        return {}
 
 def add_to_profile(user_id, beer_id, beer_rating):
     pass
