@@ -2,6 +2,8 @@
 import os
 from flask import Flask, jsonify, request
 import sqlite3
+import psycopg2
+import urlparse
 
 try:
     from flask.ext.cors import cross_origin
