@@ -4,9 +4,8 @@ from flask import Flask, jsonify, request
 import sqlite3
 
 try:
-    # this is how you would normally import
     from flask.ext.cors import cross_origin
-except:
+except ImportError:
     # support local usage without installed package
     from flask_cors import cross_origin
 
