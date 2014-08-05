@@ -6,11 +6,11 @@ import psycopg2
 import urlparse
 
 try:
-	# this is how you would normally import
-	from flask.ext.cors import cross_origin
+    # this is how you would normally import
+    from flask.ext.cors import cross_origin
 except:
-	# support local usage without installed package
-	from flask_cors import cross_origin
+    # support local usage without installed package
+    from flask_cors import cross_origin
 
 from flask.ext.sqlalchemy import SQLAlchemy
 
@@ -24,16 +24,16 @@ db = SQLAlchemy(app)
 
 db.create_all()
 class User(db.Model):
-	id = db.Column(db.Integer, primary_key=True)
-	name = db.Column(db.String(80))
-	email = db.Column(db.String(120), unique=True)
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80))
+    email = db.Column(db.String(120), unique=True)
 
-	def __init__(self, name, email):
-		self.name = name
-		self.email = email
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
 
-	def __repr__(self):
-			return '<Name %r>' % self.name
+    def __repr__(self):
+            return '<Name %r>' % self.name
 
 
 
@@ -83,25 +83,25 @@ def get_next_recommendation(beer_id):
 #     )
 
 def try_postgres:
-	user = User('John Doe', 'john.doe@example.com')
-	db.session.add(user)
-	db.session.commit()
+    user = User('John Doe', 'john.doe@example.com')
+    db.session.add(user)
+    db.session.commit()
 
-	all_users = User.query.all()
-	return all_users
-	
+    all_users = User.query.all()
+    return all_users
+    
 
 def add_to_profile(user_id, beer_id, beer_rating):
-	pass
+    pass
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
 @cross_origin()
 def respond(beer_id):
-	# recommends a similar beer from a get request
-	# return jsonify(get_next_recommendation(beer_id))
-	return try_postgres()
+    # recommends a similar beer from a get request
+    # return jsonify(get_next_recommendation(beer_id))
+    return try_postgres()
 
 if __name__ == '__main__':
-	app.run(debug = True)
-	port = int(os.environ.get('PORT', 5000))
-	app.run(host='0.0.0.0', port=port)
+    app.run(debug = True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
