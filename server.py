@@ -19,27 +19,27 @@ from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
-db = SQLAlchemy(app)
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+# db = SQLAlchemy(app)
 
-db.create_all()
-class User(db.Model):
-    """
-    this string should explain what this class is for
-    describe why this function exists
-    what it does should be self-explanatory
-    definitely a good practice to enforce
-    """
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80))
-    email = db.Column(db.String(120), unique=True)
+# # db.create_all()
+# class User(db.Model):
+#     """
+#     this string should explain what this class is for
+#     describe why this function exists
+#     what it does should be self-explanatory
+#     definitely a good practice to enforce
+#     """
+#     id = db.Column(db.Integer, primary_key=True)
+#     name = db.Column(db.String(80))
+#     email = db.Column(db.String(120), unique=True)
 
-    def __init__(self, name, email):
-        self.name = name
-        self.email = email
+#     def __init__(self, name, email):
+#         self.name = name
+#         self.email = email
 
-    def __repr__(self):
-            return '<Name %r>' % self.name
+#     def __repr__(self):
+#             return '<Name %r>' % self.name
 
 # utility functions
 # these could live in a separate file and be imported here
@@ -118,8 +118,8 @@ def add_to_profile(user_id, beer_id, beer_rating):
 @cross_origin()
 def respond(beer_id):
     # recommends a similar beer from a get request
-    # return jsonify(get_next_recommendation(beer_id))
-    return try_postgres()
+    return jsonify(get_next_recommendation(beer_id))
+    # return try_postgres()
 
 if __name__ == '__main__':
     app.run(debug = True)
