@@ -82,7 +82,7 @@ def get_next_recommendation(beer_id):
 #     port=url.port
 #     )
 
-def try_postgres:
+def try_postgres():
     user = User('John Doe', 'john.doe@example.com')
     db.session.add(user)
     db.session.commit()
