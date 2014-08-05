@@ -73,7 +73,7 @@ def get_metadata(beer_id):
     """
     name = run_query('SELECT beername FROM beernames WHERE beer_id=?', beer_id)
 
-    metadata = {'name': name[0][0]} # leaving room for description, image etc.
+    metadata = {'name': name[0][0], 'id': beer_id} # leaving room for description, image etc.
     return metadata
 
 def get_next_recommendation(beer_id):
