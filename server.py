@@ -2,8 +2,6 @@
 import os
 from flask import Flask, jsonify, request
 
-import psycopg2
-import urlparse
 import database
 
 try:
