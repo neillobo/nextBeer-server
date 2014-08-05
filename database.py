@@ -1,6 +1,7 @@
 import sqlite3
 import urlparse
 import psycopg2
+import os
 
 urlparse.uses_netloc.append("postgres")
 url = urlparse.urlparse(os.environ["DATABASE_URL"])
