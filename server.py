@@ -10,6 +10,11 @@ except ImportError:
 
 app = Flask(__name__)
 
+# flask url decorators
+
+@app.route('/api/v2/user', methods=['POST'])
+def respond():
+    return "ABD0ACSHT9P2T470B0GJ4930B"
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
 @cross_origin()
