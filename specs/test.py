@@ -41,17 +41,3 @@ class Test_Unit(object):
     suggested_beer = server.get_next_recommendation(1)
     suggested_beer_name = suggested_beer['name']
     eq_(len(suggested_beer_name) > 0, True, 'the resultant dictionary of get_next_recommendation should contain a name property')
-
-  # # the following are test examples
-  # def test_somethingelse(self):
-  #   result = server.get_next_recommendation('something')
-  #   assert_not_equal(1234, 123)
-
-  # def test_somethingelse2(self):
-  #   result = server.get_next_recommendation('22222')
-  #   assert_not_equal(1455, 123)
-
-  # def test_somethingelse3(self):
-  #   result = server.get_next_recommendation('22222')
-  #   assert_not_equal(dfdsff, 123)
-
