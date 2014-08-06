@@ -5,12 +5,12 @@ from postgres import Postgres
 db_location = os.environ.get("DATABASE_URL", "postgres://craig:helloworld@127.0.0.1:5432/testdb")
 db = Postgres(db_location)
 
-
+print db.run("Select * from beer_names")
 def get_nearest_beers(beer_id, num=10):
     """
     gets n of the most similar beers to a beer id
     """
-    beers = db.run('SELECT * FROM distances WHERE beer1_id=%(beer_id)s', {"beer_id": beer_id})
+    beers = db.all('SELECT * FROM distances WHERE beer1_id=%(beer_id)s', {"beer_id": beer_id})
     beers.sort(key=lambda x: x[2])
 
     if not beers:
