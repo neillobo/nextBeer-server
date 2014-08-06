@@ -2,7 +2,7 @@ import os
 import urlparse
 from postgres import Postgres
 
-db_location = os.environ.get("DATABASE_URL", "postgres://craig:helloworld@127.0.0.1:5432/testdb")
+db_location = os.environ.get("DATABASE_URL", "postgres://postgres@127.0.0.1:5432/postgres")
 db = Postgres(db_location)
 
 print db.run("Select * from beer_names")
