@@ -10,7 +10,8 @@ def get_nearest_beers(beer_id, num=10):
     """
     gets n of the most similar beers to a beer id
     """
-    beers = db.all('SELECT * FROM distances WHERE beer1_id=%(beer_id)s OR beer2_id=%(beer_id)s', {"beer_id": beer_id})
+    beers = db.all('SELECT * FROM distances WHERE beer1_id=%(beer_id)s \
+        OR beer2_id=%(beer_id)s', {"beer_id": beer_id})
     beers.sort(key=lambda x: x[2])
 
     if not beers:
@@ -22,15 +23,14 @@ def get_metadata(beer_id):
     """
     returns the metadata for a beer id
     """
-    name = db.one('SELECT beer_name FROM beer_names WHERE beer_id=%(beer_id)s', {"beer_id": beer_id})
+    metadata = db.one('SELECT beer_id, beer_name, beer_image_url  \
+        FROM beer_names WHERE beer_id=%(beer_id)s', {"beer_id": beer_id})
 
-    metadata = {
-        'name': name,
-        'id': beer_id
-        # description, image_url etc.
+    return {
+        "id": metadata.beer_id,
+        "name": metadata.beer_name,
+        "image_url": metadata.beer_image_url
     }
-
-    return metadata
 
 def get_next_recommendation(beer_id):
     top_beers = get_nearest_beers(beer_id)
