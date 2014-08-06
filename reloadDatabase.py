@@ -8,7 +8,7 @@ import psycopg2
 import os
 urlparse.uses_netloc.append("postgres")
 # url = urlparse.urlparse(os.environ["DATABASE_URL"])
-url = urlparse.urlparse('postgres://postgres@127.0.0.1:5432/beers')
+url = urlparse.urlparse('postgres://craig:hello@127.0.0.1:5432/testdb')
 
 conn = psycopg2.connect(
     database=url.path[1:],
