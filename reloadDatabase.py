@@ -33,6 +33,10 @@ try:
 except:
     pass
 
+
+
+
+
 db.run("CREATE TABLE distances(beer1_id int,beer2_id int, review_overall real, \
     review_aroma real ,review_palate real,review_taste real)")
 with open (distances_file_name,"r") as infile:
