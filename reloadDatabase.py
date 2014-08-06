@@ -14,7 +14,7 @@ db = Postgres(db_location)
 
 try:
     db.run("DROP TABLE beers")
-except psycopg2.ProgrammingError:
+except:
     pass
 
 db.execute("CREATE TABLE beer_names(beer_id int PRIMARY KEY NOT NULL, beer_name varchar)")
@@ -29,7 +29,7 @@ with open (beer_names_file_name,"r") as infile:
 
 try:
     db.execute("DROP TABLE distances")
-except psycopg2.ProgrammingError:
+except:
     pass
 
 db.run("CREATE TABLE distances(beer1_id int,beer2_id int, review_overall real, \
