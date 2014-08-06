@@ -31,6 +31,11 @@ class Test_Unit(object):
     # assert the_thing_to_test, 'DH'
     eq_(the_thing_to_test, 'DH')
 
+  def test_create_new_user(self):
+    new_identifier = database.create_new_user()
+    eq_(type(new_identifier) is dict, True, 'create_new_user should return a dictionary')
+    eq_(len(new_identifier['cookie']), 10, 'create_new_user return cookie should be of length 10')
+
 
   def test_get_nearest_beers(self):
     associated_beer_list = database.get_nearest_beers(2093)

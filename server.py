@@ -13,8 +13,8 @@ app = Flask(__name__)
 # flask url decorators
 
 @app.route('/api/v2/user', methods=['POST'])
-def create_user():
-    return "ABD0ACSHT9P2T470B0GJ4930B"
+def new_user():
+		return jsonify(database.create_new_user())
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
 @cross_origin()
