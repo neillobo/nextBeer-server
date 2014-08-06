@@ -15,15 +15,9 @@ db_connection = psycopg2.connect(
 )
 c = db_connection.cursor()
 
-# utility functions
-# these could live in a separate file and be imported here
-def add_to_profile(user_id, beer_id, beer_rating):
-    pass
-
 def run_query(query_string, data):
     """
-    describe why this function exists
-    what it does should be self-explanatory
+    abstract away queries for easy switching between databases
     """
     # db_connection = psycopg2.connect("dbname='testdb' user='craig' host='localhost' password='helloworld'")
     c.execute(query_string, (data,))
@@ -33,31 +27,31 @@ def run_query(query_string, data):
 
 def get_nearest_beers(beer_id, num=10):
     """
-    describe why this function exists
-    what it does should be self-explanatory
+    gets n of the most similar beers to a beer id
     """
     beers = run_query('SELECT * FROM distances WHERE beer1_id=%s', beer_id)
     beers.sort(key=lambda x: x[2])
 
     if not beers:
         print 'ERROR: no beers found for id', beer_id
+
     return beers[:num]
 
 def get_metadata(beer_id):
     """
-    describe why this function exists
-    what it does should be self-explanatory
+    returns the metadata for a beer id
     """
-    name = run_query('SELECT beer_name FROM beer_names WHERE beer_id=%s', beer_id)
+    name = run_query('SELECT beer_name FROM beer_names WHERE beer_id=%s', beer_id)[0][0]
 
-    metadata = {'name': name[0][0], 'id': beer_id} # leaving room for description, image etc.
+    metadata = {
+        'name': name,
+        'id': beer_id
+        # description, image_url etc.
+    }
+
     return metadata
 
 def get_next_recommendation(beer_id):
-    """
-    describe why this function exists
-    what it does should be self-explanatory
-    """
     top_beers = get_nearest_beers(beer_id)
     if top_beers:
         top_beer = top_beers[0]
@@ -65,3 +59,9 @@ def get_next_recommendation(beer_id):
         return get_metadata(recommended_beer_id)
     else:
         return {}
+
+def add_to_profile(user_id, beer_id, beer_rating):
+    """
+    TODO: save a perefernce for a user in the database
+    """
+    pass
