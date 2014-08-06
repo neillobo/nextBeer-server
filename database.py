@@ -2,10 +2,14 @@ import os
 import urlparse
 from postgres import Postgres
 
-db_location = os.environ.get("DATABASE_URL", "postgres://postgres@127.0.0.1:5432/postgres")
+import string
+import random
+
+seed_list = list(string.digits + string.uppercase)
+
+db_location = os.environ.get("DATABASE_URL", "postgres://craig:helloworld@127.0.0.1:5432/testdb")
 db = Postgres(db_location)
 
-print db.run("Select * from beer_names")
 def get_nearest_beers(beer_id, num=10):
     """
     gets n of the most similar beers to a beer id
@@ -18,6 +22,28 @@ def get_nearest_beers(beer_id, num=10):
         print 'ERROR: no beers found for id', beer_id
 
     return beers[:num]
+
+def create_new_user():
+    #creates a new user in the form of unique_id,unique_string in the user database
+    unique_string = ""
+    for i in range(10):
+        unique_string += random.choice(seed_list)
+    
+    try:
+        db.run("CREATE TABLE users (id SERIAL, identifier varchar(11))")
+    except:
+        pass
+
+    
+    values = {
+        "identifier" : unique_string
+    }
+    try:
+        db.run("INSERT INTO users (identifier) VALUES(%(identifier)s)", values)
+        return unique_string
+    except:
+        return "could not create user"
+
 
 def get_metadata(beer_id):
     """
