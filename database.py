@@ -10,7 +10,7 @@ def get_nearest_beers(beer_id, num=10):
     """
     gets n of the most similar beers to a beer id
     """
-    beers = db.all('SELECT * FROM distances WHERE beer1_id=%(beer_id)s', {"beer_id": beer_id})
+    beers = db.all('SELECT * FROM distances WHERE beer1_id=%(beer_id)s OR beer2_id=%(beer_id)s', {"beer_id": beer_id})
     beers.sort(key=lambda x: x[2])
 
     if not beers:
