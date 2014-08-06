@@ -5,7 +5,7 @@ python:
 addons:
   postgresql: "9.3"
 env:
-- DATABASE_URL=postgres://postgres:localhost/test_nextbeer
+- DATABASE_URL=postgres://postgres:localhost:5000/test_nextbeer
 
 # command to install dependencies
 install:
