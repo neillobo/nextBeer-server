@@ -13,7 +13,7 @@ install:
 
 # command to
 before_script:
-  - psql -c 'create database test_nextbeer;' -U postgres
+  - psql -c 'create database test_nextbeer;' -U postgres -a
 
 # command to run tests
 script: nosetests specs/test.py -v
