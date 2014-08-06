@@ -12,7 +12,7 @@ print 'port', url.port
 db_connection = psycopg2.connect(
    database=url.path[1:],
    user=url.username,
-   # password=url.password,
+   password=url.get('password', ''), #for running in travis
    host=url.hostname,
    port=url.port
 )
