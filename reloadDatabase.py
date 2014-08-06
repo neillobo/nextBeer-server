@@ -32,7 +32,7 @@ conn.commit()
 c.execute("CREATE TABLE distances(beer1_id int,beer2_id int, review_overall real, review_aroma real ,review_palate real,review_taste real)")
 with open ("./data/distances100.csv","r") as df:
   values = [tuple(line.strip().split(',')) for line in df]
-  c.execute("INSERT INTO distances VALUES(%s,%s,%s,%s,%s,%s)", values
+  c.execute("INSERT INTO distances VALUES(%s,%s,%s,%s,%s,%s)", values)
 
 
 conn.commit()
