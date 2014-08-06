@@ -1,3 +1,8 @@
+"""
+script for resetting the database whenever new data files are uploaded
+"""
+
+
 import urlparse
 import psycopg2
 import os
