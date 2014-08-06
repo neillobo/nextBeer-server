@@ -12,3 +12,6 @@
 ## dependencies
 venv/
 specs/stubs/*.txt
+
+##annoying files
+*.orig
