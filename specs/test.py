@@ -39,7 +39,7 @@ class Test_Unit(object):
 
 
   def test_get_metadata(self):
-    database.get_metadate(5)
+    database.get_metadata(5)
     eq_(type(beer_meta_data) is list, True, 'get_meta_data should return a dictionary of metadata about a beer')
     eq_('name' in beer_meta_data, True, 'get_meta_data should return a dictionary with name property in it')
     eq_('id' in beer_meta_data, True, 'get_meta_data should return a dictionary with id in it')
