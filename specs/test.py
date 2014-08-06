@@ -33,24 +33,24 @@ class Test_Unit(object):
 
 
   def test_get_nearest_beers(self):
-    associated_beer_list = database.get_nearest_beers(3)
+    associated_beer_list = database.get_nearest_beers(2093)
     eq_(len(associated_beer_list), 10, 'get_nearest_beers should return a list of 10 items by default')
     eq_(type(associated_beer_list) is list, True, 'get_nearest_beers should return a list')
 
 
   def test_get_metadata(self):
-    database.get_metadata(5)
-    eq_(type(beer_meta_data) is list, True, 'get_meta_data should return a dictionary of metadata about a beer')
+    beer_meta_data = database.get_metadata(2093)
+    eq_(type(beer_meta_data) is dict, True, 'get_meta_data should return a dictionary of metadata about a beer')
     eq_('name' in beer_meta_data, True, 'get_meta_data should return a dictionary with name property in it')
     eq_('id' in beer_meta_data, True, 'get_meta_data should return a dictionary with id in it')
 
 
   def test_get_next_recommendation(self):
-    suggested_beer = database.get_next_recommendation(1)
+    suggested_beer = database.get_next_recommendation(65)
     eq_(type(suggested_beer) is dict, True, 'get_next_recommendation should return a dictionary of a suggested beer')
 
 
   def test_get_next_recommendation_content(self):
-    suggested_beer = database.get_next_recommendation(5)
+    suggested_beer = database.get_next_recommendation(17060)
     suggested_beer_name = suggested_beer['name']
     eq_(len(suggested_beer_name) > 0, True, 'the resultant dictionary of get_next_recommendation should contain a name property')
