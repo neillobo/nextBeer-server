@@ -2,46 +2,49 @@
 script for resetting the database whenever new data files are uploaded
 """
 
-
 import urlparse
-import psycopg2
+from postgres import Postgres
 import os
-urlparse.uses_netloc.append("postgres")
-# url = urlparse.urlparse(os.environ["DATABASE_URL"])
-url = urlparse.urlparse('postgres://craig:hello@127.0.0.1:5432/testdb')
 
-conn = psycopg2.connect(
-    database=url.path[1:],
-    user=url.username,
-    password=url.password,
-    host=url.hostname,
-    port=url.port
-)
-print conn
+distances_file_name  = "./data/distances100.csv"
+beer_names_file_name = "./data/beernames100.csv"
 
-cur = conn.cursor()
+db_location = os.environ.get("DATABASE_URL", "postgres://craig:hello@127.0.0.1:5432/testdb")
+db = Postgres(db_location)
 
 try:
-    cur.execute("DROP TABLE beers")
-except psycopg2.ProgrammingError:
-    pass
-conn.commit()
-cur.execute("CREATE TABLE beer_names(beer_id int PRIMARY KEY NOT NULL, beer_name varchar)")
-with open ("./data/beernames100.csv","r") as df:
-    values = [tuple(line.strip().split(',')) for line in df]
-    cur.executemany("INSERT INTO beer_names VALUES(%s,%s)", values)
-
-try:
-    cur.execute("DROP TABLE distances")
+    db.run("DROP TABLE beers")
 except psycopg2.ProgrammingError:
     pass
 
-conn.commit()
-cur.execute("CREATE TABLE distances(beer1_id int,beer2_id int, review_overall real, review_aroma real ,review_palate real,review_taste real)")
-with open ("./data/distances100.csv","r") as df:
-    values = [tuple(line.strip().split(',')) for line in df]
-    cur.executemany("INSERT INTO distances VALUES(%s,%s,%s,%s,%s,%s)", values)
+db.execute("CREATE TABLE beer_names(beer_id int PRIMARY KEY NOT NULL, beer_name varchar)")
+with open (beer_names_file_name,"r") as infile:
+    for line in infile:
+        comma_seperated_values = line.strip().split(',')
+        values = {
+            "beer_id" : comma_seperated_values[0],
+            "beer_name" : comma_seperated_values[1]
+        }
+        db.run("INSERT INTO beer_names VALUES(%{beer_id},%{beer_name})", values)
 
+try:
+    db.execute("DROP TABLE distances")
+except psycopg2.ProgrammingError:
+    pass
 
-conn.commit()
-conn.close()
+db.run("CREATE TABLE distances(beer1_id int,beer2_id int, review_overall real, \
+    review_aroma real ,review_palate real,review_taste real)")
+with open (distances_file_name,"r") as infile:
+    for line in infile:
+        comma_seperated_values = line.strip().split(',')
+        values = {
+            "beer1_id": comma_seperated_values[0],
+            "beer2_id": comma_seperated_values[1],
+            "review_overall": comma_seperated_values[2],
+            "review_aroma": comma_seperated_values[3],
+            "review_palate": comma_seperated_values[4],
+            "review_taste": comma_seperated_values[5]
+        }
+        db.run("INSERT INTO distances VALUES(%{beer1_id}, %{beer2_id}, \
+            %{review_overall}, %{review_aroma}, %{review_palate}, %{review_taste})", values)
+
