@@ -9,7 +9,7 @@ import os
 distances_file_name  = "./data/distances.csv"
 beer_names_file_name = "./data/metadata.csv"
 
-db_location = os.environ.get("DATABASE_URL", "postgres://craig:helloworld@127.0.0.1:5432/testdb")
+db_location = os.environ.get("DATABASE_URL", "postgres://postgres@127.0.0.1:5432/postgres")
 db = Postgres(db_location)
 
 try:
@@ -24,7 +24,7 @@ with open (beer_names_file_name,"r") as infile:
         values = {
             "beer_id" : comma_seperated_values[0],
             "beer_name" : comma_seperated_values[1],
-            "beer_image_url": comma_seperated_values[1]
+            "beer_image_url": comma_seperated_values[2]
         }
         db.run("INSERT INTO beer_names VALUES(%(beer_id)s,%(beer_name)s,%(beer_image_url)s)", values)
 
