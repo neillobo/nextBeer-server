@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 @app.route('/api/v2/user', methods=['POST'])
 def new_user():
-		return database.create_new_user()
+		return jsonify(database.create_new_user())
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
 @cross_origin()

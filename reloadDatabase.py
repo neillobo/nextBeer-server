@@ -50,3 +50,8 @@ with open (distances_file_name,"r") as infile:
         db.run("INSERT INTO distances VALUES(%(beer1_id)s, %(beer2_id)s, \
             %(review_overall)s, %(review_aroma)s, %(review_palate)s, %(review_taste)s)", values)
 
+try:
+    db.run("DROP TABLE users")
+except:
+    pass
+db.run("CREATE TABLE users (id SERIAL, cookie varchar(11))")

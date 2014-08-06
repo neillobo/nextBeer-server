@@ -33,8 +33,9 @@ class Test_Unit(object):
 
   def test_create_new_user(self):
     new_identifier = database.create_new_user()
-    eq_(len(new_identifier), 10, 'create_new_user return should be of length 10')
-    eq_(type(new_identifier)) is str, True, 'create_new_user should return a string'
+    eq_(type(new_identifier) is dict, True, 'create_new_user should return a dictionary')
+    eq_(len(new_identifier['cookie']), 10, 'create_new_user return cookie should be of length 10')
+
 
   def test_get_nearest_beers(self):
     associated_beer_list = database.get_nearest_beers(2093)

@@ -7,7 +7,7 @@ import random
 
 seed_list = list(string.digits + string.uppercase)
 
-db_location = os.environ.get("DATABASE_URL", "postgres://craig:helloworld@127.0.0.1:5432/testdb")
+db_location = os.environ.get("DATABASE_URL", "postgres://postgres@127.0.0.1:5432/postgres")
 db = Postgres(db_location)
 
 def get_nearest_beers(beer_id, num=10):
@@ -25,24 +25,14 @@ def get_nearest_beers(beer_id, num=10):
 
 def create_new_user():
     #creates a new user in the form of unique_id,unique_string in the user database
-    unique_string = ""
-    for i in range(10):
-        unique_string += random.choice(seed_list)
-    
-    try:
-        db.run("CREATE TABLE users (id SERIAL, identifier varchar(11))")
-    except:
-        pass
-
+    unique_string = "".join([random.choice(seed_list) for _ in range(10)])
     
     values = {
-        "identifier" : unique_string
+        "cookie" : unique_string
     }
-    try:
-        db.run("INSERT INTO users (identifier) VALUES(%(identifier)s)", values)
-        return unique_string
-    except:
-        return "could not create user"
+
+    db.run("INSERT INTO users (cookie) VALUES(%(cookie)s)", values)
+    return values 
 
 
 def get_metadata(beer_id):
