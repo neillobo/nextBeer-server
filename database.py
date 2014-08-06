@@ -1,34 +1,16 @@
-import urlparse
-import psycopg2
 import os
+import urlparse
+from postgres import Postgres
 
-urlparse.uses_netloc.append("postgres")
-# url = urlparse.urlparse(os.environ["DATABASE_URL"])
-url = urlparse.urlparse('postgres://craig:hello@127.0.0.1:5432/testdb')
-db_connection = psycopg2.connect(
-   database=url.path[1:],
-   user=url.username,
-   password=url.password,
-   host=url.hostname,
-   port=url.port
-)
-c = db_connection.cursor()
+db_location = os.environ.get("DATABASE_URL", "postgres://craig:helloworld@127.0.0.1:5432/testdb")
+db = Postgres(db_location)
 
-def run_query(query_string, data):
-    """
-    abstract away queries for easy switching between databases
-    """
-    # db_connection = psycopg2.connect("dbname='testdb' user='craig' host='localhost' password='helloworld'")
-    c.execute(query_string, (data,))
-    result = list(c.fetchall())
-    # db_connection.close()
-    return result
 
 def get_nearest_beers(beer_id, num=10):
     """
     gets n of the most similar beers to a beer id
     """
-    beers = run_query('SELECT * FROM distances WHERE beer1_id=%s', beer_id)
+    beers = db.run('SELECT * FROM distances WHERE beer1_id=%(beer_id)s', {"beer_id": beer_id})
     beers.sort(key=lambda x: x[2])
 
     if not beers:
@@ -40,7 +22,7 @@ def get_metadata(beer_id):
     """
     returns the metadata for a beer id
     """
-    name = run_query('SELECT beer_name FROM beer_names WHERE beer_id=%s', beer_id)[0][0]
+    name = db.one('SELECT beer_name FROM beer_names WHERE beer_id=%(beer_id)s', {"beer_id": beer_id})
 
     metadata = {
         'name': name,
@@ -61,6 +43,6 @@ def get_next_recommendation(beer_id):
 
 def add_to_profile(user_id, beer_id, beer_rating):
     """
-    TODO: save a perefernce for a user in the database
+    TODO: save a preference for a user in the database
     """
     pass
