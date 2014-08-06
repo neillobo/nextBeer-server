@@ -4,11 +4,14 @@ python:
   - "2.7"
 addons:
   postgresql: "9.3"
+env:
+- DATABASE_URL=postgres:///$postgres
 
 # command to install dependencies
 install:
   - "pip install -r requirements.txt"
 
+# command to
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
 
