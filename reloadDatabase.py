@@ -9,15 +9,15 @@ import os
 distances_file_name  = "./data/distances100.csv"
 beer_names_file_name = "./data/beernames100.csv"
 
-db_location = os.environ.get("DATABASE_URL", "postgres://craig:hello@127.0.0.1:5432/testdb")
+db_location = os.environ.get("DATABASE_URL", "postgres://craig:helloworld@127.0.0.1:5432/testdb")
 db = Postgres(db_location)
 
 try:
-    db.run("DROP TABLE beers")
+    db.run("DROP TABLE beer_names")
 except:
     pass
 
-db.execute("CREATE TABLE beer_names(beer_id int PRIMARY KEY NOT NULL, beer_name varchar)")
+db.run("CREATE TABLE beer_names(beer_id int PRIMARY KEY NOT NULL, beer_name varchar)")
 with open (beer_names_file_name,"r") as infile:
     for line in infile:
         comma_seperated_values = line.strip().split(',')
@@ -25,10 +25,10 @@ with open (beer_names_file_name,"r") as infile:
             "beer_id" : comma_seperated_values[0],
             "beer_name" : comma_seperated_values[1]
         }
-        db.run("INSERT INTO beer_names VALUES(%{beer_id},%{beer_name})", values)
+        db.run("INSERT INTO beer_names VALUES(%(beer_id)s,%(beer_name)s)", values)
 
 try:
-    db.execute("DROP TABLE distances")
+    db.run("DROP TABLE distances")
 except:
     pass
 
@@ -45,6 +45,6 @@ with open (distances_file_name,"r") as infile:
             "review_palate": comma_seperated_values[4],
             "review_taste": comma_seperated_values[5]
         }
-        db.run("INSERT INTO distances VALUES(%{beer1_id}, %{beer2_id}, \
-            %{review_overall}, %{review_aroma}, %{review_palate}, %{review_taste})", values)
+        db.run("INSERT INTO distances VALUES(%(beer1_id)s, %(beer2_id)s, \
+            %(review_overall)s, %(review_aroma)s, %(review_palate)s, %(review_taste)s)", values)
 
