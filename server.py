@@ -13,14 +13,15 @@ app = Flask(__name__)
 # flask url decorators
 
 @app.route('/api/v2/user', methods=['POST'])
-@cross_origin()
+@crossdomain(origin='*',headers='PRIVATE-TOKEN')
 def new_user():
 		print request.headers
 		return jsonify(database.create_new_user())
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
-@cross_origin()
+@crossdomain(origin='*',headers='PRIVATE-TOKEN')
 def respond(beer_id):
+    print request.headers
     return jsonify(database.get_next_recommendation(beer_id))
 
 if __name__ == '__main__':
