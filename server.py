@@ -16,10 +16,12 @@ app = Flask(__name__)
 
 @app.route('/api/v2/user', methods=['POST'])
 def new_user():
-		print request.headers
-		response = make_response(jsonify(database.create_new_user()))
-		return response
-		# return jsonify(database.create_new_user())
+        print request.headers
+        response = make_response(jsonify(database.create_new_user()))
+        response.headers['Access-Control-Allow-Origin'] = "*"
+        response.headers['Access-Control-Allow-Headers'] = "PRIVATE-TOKEN"
+        return response
+        # return jsonify(database.create_new_user())
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
 def respond(beer_id):
