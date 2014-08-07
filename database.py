@@ -5,7 +5,6 @@ from postgres import Postgres
 import string
 import random
 
-seed_list = list(string.digits + string.uppercase)
 
 db_location = os.environ.get("DATABASE_URL", "postgres://postgres@127.0.0.1:5432/postgres")
 db = Postgres(db_location)
@@ -23,16 +22,9 @@ def get_nearest_beers(beer_id, num=10):
 
     return beers[:num]
 
-def create_new_user():
+def save_new_user(unique_string):
     #creates a new user in the form of unique_id,unique_string in the user database
-    unique_string = "".join([random.choice(seed_list) for _ in range(10)])
-    
-    values = {
-        "cookie" : unique_string
-    }
-
-    db.run("INSERT INTO users (cookie) VALUES(%(cookie)s)", values)
-    return values 
+    db.run("INSERT INTO users (cookie) VALUES(%(cookie)s)", { "cookie" : unique_string })
 
 
 def get_metadata(beer_id):
@@ -43,21 +35,13 @@ def get_metadata(beer_id):
         FROM beer_names WHERE beer_id=%(beer_id)s', {"beer_id": beer_id})
 
     return {
-        "id": metadata.beer_id,
-        "name": metadata.beer_name,
-        "image_url": metadata.beer_image_url
+        "beer_id": metadata.beer_id,
+        "beer_name": metadata.beer_name,
+        "beer_image_url": metadata.beer_image_url
     }
 
-def get_next_recommendation(beer_id):
-    top_beers = get_nearest_beers(beer_id)
-    if top_beers:
-        top_beer = top_beers[0]
-        recommended_beer_id = top_beer[1]
-        return get_metadata(recommended_beer_id)
-    else:
-        return {}
 
-def add_to_profile(user_id, beer_id, beer_rating):
+def save_to_profile(user_id, beer_id, beer_rating):
     """
     TODO: save a preference for a user in the database
     """
