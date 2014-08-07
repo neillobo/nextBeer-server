@@ -1,7 +1,9 @@
 #!flask/bin/python
 import os
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, make_response
 import database
+
+
 
 try:
     from flask.ext.cors import cross_origin
@@ -13,16 +15,20 @@ app = Flask(__name__)
 # flask url decorators
 
 @app.route('/api/v2/user', methods=['POST'])
-@crossdomain(origin='*',headers='PRIVATE-TOKEN')
 def new_user():
 		print request.headers
-		return jsonify(database.create_new_user())
+		response = make_response(jsonify(database.create_new_user()))
+		return response
+		# return jsonify(database.create_new_user())
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
-@crossdomain(origin='*',headers='PRIVATE-TOKEN')
 def respond(beer_id):
     print request.headers
-    return jsonify(database.get_next_recommendation(beer_id))
+    response = make_response(jsonify(database.get_next_recommendation(beer_id)))
+    response.headers['Access-Control-Allow-Origin'] = "*"
+    response.headers['Access-Control-Allow-Headers'] = "PRIVATE-TOKEN"
+    return response
+    # return jsonify(database.get_next_recommendation(beer_id))
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
