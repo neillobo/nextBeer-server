@@ -12,25 +12,21 @@ except ImportError:
 
 app = Flask(__name__)
 
-# flask url decorators
+# configure a default header
+# we handle each route individually using @cross_origin()
+app.config['CORS_HEADERS'] = ['Authorization']
 
+
+# flask url decorators
 @app.route('/api/v2/user', methods=['POST'])
+@cross_origin()
 def new_user():
-        print request.headers
-        response = make_response(jsonify(database.create_new_user()))
-        response.headers['Access-Control-Allow-Origin'] = "*"
-        response.headers['Access-Control-Allow-Headers'] = "PRIVATE-TOKEN"
-        return response
-        # return jsonify(database.create_new_user())
+    return jsonify(database.create_new_user())
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
+@cross_origin()
 def respond(beer_id):
-    print request.headers
-    response = make_response(jsonify(database.get_next_recommendation(beer_id)))
-    response.headers['Access-Control-Allow-Origin'] = "*"
-    response.headers['Access-Control-Allow-Headers'] = "PRIVATE-TOKEN"
-    return response
-    # return jsonify(database.get_next_recommendation(beer_id))
+    return jsonify(database.get_next_recommendation(beer_id))
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
