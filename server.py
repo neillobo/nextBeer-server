@@ -13,7 +13,9 @@ app = Flask(__name__)
 # flask url decorators
 
 @app.route('/api/v2/user', methods=['POST'])
+@cross_origin()
 def new_user():
+		print request.headers
 		return jsonify(database.create_new_user())
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
