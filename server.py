@@ -45,7 +45,8 @@ def get_next_recommendation():
 @cross_origin()
 def get_similar_beer(beer_id):
     try:
-        top_beer = database.get_nearest_beers(beer_id, 1)
+        top_beer = database.get_nearest_beers(beer_id, 1)[0]
+        print top_beer
         recommended_beer_id = top_beer[1]
         return jsonify(database.get_metadata(recommended_beer_id))
     except IndexError:
