@@ -13,36 +13,31 @@ except ImportError:
     from flask_cors import cross_origin
 
 app = Flask(__name__)
-
 # configure a default header
 # we handle each route individually using @cross_origin()
 
-app.config['CORS_HEADERS'] = ['Content-Type','Authorization']
+# app.config['CORS_HEADERS'] = ['Content-Type']
 # app.config['CORS_ORIGINS'] = ['*']
 
 
 # flask url decorators
 seed_list = list(string.digits + string.uppercase)
-@app.route('/api/v2/user', methods=['POST'])
+@app.route('/api/v2/user', methods=['GET'])
 @cross_origin()
+# @cross_origin(origin='*',headers=['Content-Type','Authorization'])
 def create_new_user():
     unique_string = "".join([random.choice(seed_list) for _ in range(10)])
     print "unique token is",unique_string
     database.save_new_user(unique_string)
     return unique_string
 
-@app.route('/api/v2/beer', methods = ['POST'])
+@app.route('/api/v2/<beer_id>/<rating>/<user_id>', methods = ['GET'])
 @cross_origin()
-def get_next_recommendation():
-    print request.headers
-    print request.data
-
-    user_id = request.headers.Authorization
-    beer_id = request.data.beer_id
-    rating  = request.data.rating
-
+def get_next_recommendation(beer_id,rating,user_id):
+    print user_id,beer_id,rating
     database.save_to_profile(user_id, beer_id, rating)
-    return jsonify(database.get_next_recommendation(user_id))
+    return jsonify({"beer_id" : 607})
+    # return "hello"
 
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
