@@ -24,6 +24,7 @@ def get_nearest_beers(beer_id, num=10):
 
 def save_new_user(unique_string):
     #creates a new user in the form of unique_id,unique_string in the user database
+    print "in save new user function", unique_string
     db.run("INSERT INTO users (cookie) VALUES(%(cookie)s)", { "cookie" : unique_string })
 
 

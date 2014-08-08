@@ -2,6 +2,7 @@
 import os
 from flask import Flask, jsonify, request, make_response
 import string
+import random
 
 import database
 
@@ -15,7 +16,9 @@ app = Flask(__name__)
 
 # configure a default header
 # we handle each route individually using @cross_origin()
-app.config['CORS_HEADERS'] = ['Authorization']
+
+app.config['CORS_HEADERS'] = ['Content-Type','Authorization']
+# app.config['CORS_ORIGINS'] = ['*']
 
 
 # flask url decorators
@@ -24,8 +27,9 @@ seed_list = list(string.digits + string.uppercase)
 @cross_origin()
 def create_new_user():
     unique_string = "".join([random.choice(seed_list) for _ in range(10)])
+    print "unique token is",unique_string
     database.save_new_user(unique_string)
-    return jsonify(unique_string)
+    return unique_string
 
 @app.route('/api/v2/beer', methods = ['POST'])
 @cross_origin()
