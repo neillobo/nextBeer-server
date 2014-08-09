@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """
 script for resetting the database whenever new data files are uploaded
 """
@@ -58,27 +59,27 @@ except psycopg2.ProgrammingError:
     pass
 finally:
     db.run("CREATE TABLE users (id SERIAL, cookie varchar(11))")
-    with open(usernames_file_name, 'r') as infile:
+    with open(username_file_name, 'r') as infile:
         for line in infile:
             comma_seperated_values = line.strip().split(',')
             values = {
-                "cookie": comma_seperated_values[1],
+                "cookie": comma_seperated_values[1][:11],
             }
-            db.run("INSERT INTO users VALUES(%(cookie)s)", values)
+            db.run("INSERT INTO users (cookie) VALUES(%(cookie)s)", values)
 
 try:
     db.run("DROP TABLE reviews")
 except psycopg2.ProgrammingError:
     pass
 finally:
-    db.run("CREATE TABLE reviews (user_id int, beer_id int, rating int)")
+    db.run("CREATE TABLE reviews (user_id int, beer_id int, beer_rating int)")
     with open(reviews_file_name, 'r') as infile:
-        for line in infile:
+        for line in infile: # this takes a while with 1.5M reviews
             comma_seperated_values = line.strip().split(',')
             values = {
                 "user_id": comma_seperated_values[0],
                 "beer_id": comma_seperated_values[1],
-                "rating": comma_seperated_values[2]
+                "beer_rating": comma_seperated_values[2]
             }
-            db.run("INSERT INTO reviews VALUES(%(user_id)s, %(beer_id)s, %(rating)s)", values)
+            db.run("INSERT INTO reviews VALUES(%(user_id)s, %(beer_id)s, %(beer_rating)s)", values)
 
