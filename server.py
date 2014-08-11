@@ -27,17 +27,18 @@ seed_list = list(string.digits + string.uppercase)
 # @cross_origin(origin='*',headers=['Content-Type','Authorization'])
 def create_new_user():
     unique_string = "".join([random.choice(seed_list) for _ in range(10)])
-    print "unique token is",unique_string
     database.save_new_user(unique_string)
-    return unique_string
+    return jsonify({"unique_string": unique_string})
 
-@app.route('/api/v2/<beer_id>/<rating>/<user_id>', methods = ['GET'])
+@app.route('/api/v2/<beer_id>/<rating>/<user_string>', methods = ['GET'])
 @cross_origin()
-def get_next_recommendation(beer_id,rating,user_id):
-    print user_id,beer_id,rating
+def get_next_recommendation(beer_id, rating, user_string):
+    user_id = database.get_userid_from_string(user_string)
     database.save_to_profile(user_id, beer_id, rating)
-    return jsonify({"beer_id" : 607})
-    # return "hello"
+
+    recommended_beer_id = database.get_next_recommendation(user_id)
+
+    return jsonify(database.get_metadata(recommended_beer_id))
 
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
