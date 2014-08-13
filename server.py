@@ -20,14 +20,14 @@ app.config['CORS_HEADERS'] = ['Authorization']
 # flask url decorators
 seed_list = list(string.digits + string.uppercase)
 
-@app.route('/api/v2/user', methods=['GET','POST'])
+@app.route('/api/v2/user', methods=['POST'])
 @cross_origin()
 def create_new_user():
     unique_string = "".join([random.choice(seed_list) for _ in range(10)])
-    # database.save_new_user(unique_string)
+    database.save_new_user(unique_string)
     return jsonify({"token": unique_string})
 
-@app.route('/api/v2/rate', methods = ['GET','POST'])
+@app.route('/api/v2/rate', methods = ['POST'])
 @cross_origin()
 def get_next_recommendation():
     # we get a POST request from the client in JSON format
