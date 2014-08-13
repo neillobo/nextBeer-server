@@ -22,9 +22,10 @@ try:
 except psycopg2.ProgrammingError:
     pass
 finally:
-    db.run("CREATE TABLE beer_names(beer_id int PRIMARY KEY NOT NULL, beer_name varchar, beer_image_url varchar)")
-    df = pandas.read_csv(beer_names_file_name)
-    for beer in df.iterrows():
+    db.run("CREATE TABLE beer_names(beer_id int PRIMARY KEY NOT NULL, beer_name varchar, \
+        beer_image_url varchar, beer_style varchar, brewery_name varchar, beer_abv real)")
+    df = pandas.read_csv(beer_names_file_name).dropna()
+    for x, beer in df.iterrows():
         values = {
             "beer_id" : beer['beer_beerid'],
             "beer_name" : beer['beer_name'],
@@ -34,7 +35,7 @@ finally:
             "beer_abv" : beer['beer_abv']
 
         }
-        db.run("INSERT INTO beer_names VALUES(%(beer_id)s,%(beer_name)s,%(beer_image_url)s)", values)
+        db.run("INSERT INTO beer_names VALUES(%(beer_id)s, %(beer_name)s, %(beer_image_url)s, %(beer_style)s, %(brewery_name)s, %(beer_abv)s)", values)
 
 try:
     db.run("DROP TABLE distances")
@@ -87,9 +88,3 @@ finally:
             }
             db.run("INSERT INTO reviews VALUES(%(user_id)s, %(beer_id)s, %(beer_rating)s)", values)
 
-"beer_id"
-"beer_name"
-"beer_image_url"
-"beer_style"
-"brewery_name"
-"beer_abv"
