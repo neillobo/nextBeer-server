@@ -20,7 +20,7 @@ app.config['CORS_HEADERS'] = ['Authorization']
 # flask url decorators
 seed_list = list(string.digits + string.uppercase)
 
-@app.route('/api/v2/user', methods=['POST'])
+@app.route('/api/v2/user', methods=['GET','POST'])
 @cross_origin()
 def create_new_user():
     unique_string = "".join([random.choice(seed_list) for _ in range(10)])
