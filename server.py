@@ -34,10 +34,10 @@ def get_next_recommendation(beer_id):
     # whose request body contains beer_id and beer_rating
     # token comes in "Bearer xvgsfddf" fashion as per the convention
     token = request.headers['Authorization'].split(' ')[1]
-    user_id = database.get_userid_from_string(token)
     data = request.json
     beer_id = data['beer_id']
     beer_rating = data['beer_rating']
+    user_id = database.get_userid_from_string(token)
     database.save_to_profile(user_id, beer_id, beer_rating)
     recommended_beer_id = database.get_next_recommendation(user_id)
     return jsonify(database.get_metadata(recommended_beer_id))
