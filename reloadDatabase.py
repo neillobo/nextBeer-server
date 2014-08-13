@@ -6,6 +6,7 @@ script for resetting the database whenever new data files are uploaded
 import urlparse
 from postgres import Postgres
 import psycopg2
+import pandas
 import os
 
 distances_file_name  = "./data/distances.csv"
@@ -22,15 +23,18 @@ except psycopg2.ProgrammingError:
     pass
 finally:
     db.run("CREATE TABLE beer_names(beer_id int PRIMARY KEY NOT NULL, beer_name varchar, beer_image_url varchar)")
-    with open (beer_names_file_name,"r") as infile:
-        for line in infile:
-            comma_seperated_values = line.strip().split(',')
-            values = {
-                "beer_id" : comma_seperated_values[0],
-                "beer_name" : comma_seperated_values[1],
-                "beer_image_url": comma_seperated_values[2]
-            }
-            db.run("INSERT INTO beer_names VALUES(%(beer_id)s,%(beer_name)s,%(beer_image_url)s)", values)
+    df = pandas.read_csv(beer_names_file_name)
+    for beer in df.iterrows():
+        values = {
+            "beer_id" : beer['beer_beerid'],
+            "beer_name" : beer['beer_name'],
+            "beer_image_url": 'http://cdn.beeradvocate.com/im/beers/%d.jpg' % beer['beer_beerid'],
+            "beer_style" : beer['beer_style'],
+            "brewery_name" : beer['brewery_name'],
+            "beer_abv" : beer['beer_abv']
+
+        }
+        db.run("INSERT INTO beer_names VALUES(%(beer_id)s,%(beer_name)s,%(beer_image_url)s)", values)
 
 try:
     db.run("DROP TABLE distances")
@@ -83,3 +87,9 @@ finally:
             }
             db.run("INSERT INTO reviews VALUES(%(user_id)s, %(beer_id)s, %(beer_rating)s)", values)
 
+"beer_id"
+"beer_name"
+"beer_image_url"
+"beer_style"
+"brewery_name"
+"beer_abv"
