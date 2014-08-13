@@ -24,7 +24,7 @@ seed_list = list(string.digits + string.uppercase)
 @cross_origin()
 def create_new_user():
     unique_string = "".join([random.choice(seed_list) for _ in range(10)])
-    database.save_new_user(unique_string)
+    # database.save_new_user(unique_string)
     return jsonify({"token": unique_string})
 
 @app.route('/api/v2/rate', methods = ['GET','POST'])
