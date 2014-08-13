@@ -17,7 +17,6 @@ app = Flask(__name__)
 # we handle each route individually using @cross_origin()
 app.config['CORS_HEADERS'] = ['Authorization']
 
-# flask url decorators
 seed_list = list(string.digits + string.uppercase)
 
 @app.route('/api/v2/user', methods=['POST'])

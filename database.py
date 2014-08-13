@@ -53,6 +53,7 @@ def get_next_recommendations(user_id, num=10):
     get all beers I like.
     get all users that like a beer I like
     get all the beers they like, count the occurences of each
+    return (num) most occuring ones that I haven't rated yet
     '''
     return db.all("SELECT beer_id FROM reviews WHERE beer_rating=1 AND user_id IN \
         (SELECT DISTINCT user_id FROM reviews WHERE beer_rating=1 AND beer_id IN \
