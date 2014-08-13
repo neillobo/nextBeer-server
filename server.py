@@ -27,20 +27,21 @@ def create_new_user():
     database.save_new_user(unique_string)
     return jsonify({"token": unique_string})
 
-@app.route('/api/v2/<beer_id>', methods = ['POST'])
+@app.route('/api/v2/<beer_id>', methods = ['GET','POST'])
 @cross_origin()
 def get_next_recommendation(beer_id):
     # we get a POST request from the client in JSON format
     # whose request body contains beer_id and beer_rating
     # token comes in "Bearer xvgsfddf" fashion as per the convention
-    token = request.headers['Authorization'].split(' ')[1]
-    data = request.json
-    beer_id = data['beer_id']
-    beer_rating = data['beer_rating']
-    user_id = database.get_userid_from_string(token)
-    database.save_to_profile(user_id, beer_id, beer_rating)
-    recommended_beer_id = database.get_next_recommendation(user_id)
-    return jsonify(database.get_metadata(recommended_beer_id))
+    # token = request.headers['Authorization'].split(' ')[1]
+    # data = request.json
+    # beer_id = data['beer_id']
+    # beer_rating = data['beer_rating']
+    # user_id = database.get_userid_from_string(token)
+    # database.save_to_profile(user_id, beer_id, beer_rating)
+    # recommended_beer_id = database.get_next_recommendation(user_id)
+    # return jsonify(database.get_metadata(recommended_beer_id))
+    return 'hello world'
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
 @cross_origin()
