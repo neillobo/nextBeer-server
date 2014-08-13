@@ -41,8 +41,5 @@ class Test_Unit(object):
         eq_(beer_meta_data['beer_image_url'], 'http://cdn.beeradvocate.com/im/beers/2093.jpg', 'the parameter for beer_image_url in metadata should be a http://cdn.beeradvocate.com/im/beers/2093.jpg')
 
     def test_get_next_recommendation(self):
-        beer_recomendation = get_next_recommendation(10)
-        eq_(type(beer_recomendation) is dict, True, 'get_meta_data should return a dictionary of metadata about a beer')
-        eq_(isinstance(beer_recomendation['beer_id'], (int, long)), True, 'the parameter for beer_id in metadata should be an int')
-        eq_(isinstance(beer_recomendation['beer_name'], basestring), True, 'the parameter for beer_name in metadata should be a string')
-        eq_(isinstance(beer_recomendation['beer_image_url'], basestring), True, 'the parameter for beer_image_url in metadata should be a string')
+        beer_recomendation = database.get_next_recommendation(10)
+        eq_(isinstance(beer_recomendation, (int, long)), True, 'get_next_recommendation should return the id of a beer')
