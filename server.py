@@ -15,31 +15,32 @@ except ImportError:
 app = Flask(__name__)
 # configure a default header
 # we handle each route individually using @cross_origin()
-
-# app.config['CORS_HEADERS'] = ['Content-Type']
-# app.config['CORS_ORIGINS'] = ['*']
-
+app.config['CORS_HEADERS'] = ['Authorization']
 
 # flask url decorators
 seed_list = list(string.digits + string.uppercase)
-@app.route('/api/v2/user', methods=['GET'])
+
+@app.route('/api/v2/user', methods=['POST'])
 @cross_origin()
-# @cross_origin(origin='*',headers=['Content-Type','Authorization'])
 def create_new_user():
     unique_string = "".join([random.choice(seed_list) for _ in range(10)])
     database.save_new_user(unique_string)
-    return jsonify({"unique_string": unique_string})
+    return jsonify({"token": unique_string})
 
-@app.route('/api/v2/<beer_id>/<rating>/<user_string>', methods = ['GET'])
+@app.route('/api/v2/rate', methods = ['POST'])
 @cross_origin()
-def get_next_recommendation(beer_id, rating, user_string):
-    user_id = database.get_userid_from_string(user_string)
-    database.save_to_profile(user_id, beer_id, rating)
-
+def get_next_recommendation():
+    # we get a POST request from the client in JSON format
+    # whose request body contains beer_id and beer_rating
+    # token comes in "Bearer xvgsfddf" fashion as per the convention
+    token = request.headers['Authorization'].split(' ')[1]
+    data = request.json
+    beer_id = data['beer_id']
+    beer_rating = data['beer_rating']
+    user_id = database.get_userid_from_string(token)
+    database.save_to_profile(user_id, beer_id, beer_rating)
     recommended_beer_id = database.get_next_recommendation(user_id)
-
     return jsonify(database.get_metadata(recommended_beer_id))
-
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
 @cross_origin()
