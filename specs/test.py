@@ -11,28 +11,10 @@ import database
 import server
 
 class Test_Unit(object):
-    """
-    This is a test Class. The nose test framework
-    prescribes that a test class name should be
-    prefixed with Test.
-    """
-
     @classmethod
     def setup_class(klass):
-        print "any setup to run before the class gets instantiated"
-
-
-    def sample_test(self):
-        """
-        follow the structure of this test to create new, meaningful unit tests in the future
-        """
-        the_thing_to_test = 'DH'
-        # if both args are equal, it passes
-        # alternatively you could write
-        # assert the_thing_to_test, 'DH'
-        eq_(the_thing_to_test, 'DH')
-
-
+        # any setup to run before the class gets instantiated
+        pass
 
     def test_get_nearest_beers(self):
         associated_beer_list = database.get_nearest_beers(2093)
@@ -58,3 +40,6 @@ class Test_Unit(object):
         eq_(isinstance(beer_meta_data['beer_image_url'], basestring), True, 'the parameter for beer_image_url in metadata should be a string')
         eq_(beer_meta_data['beer_image_url'], 'http://cdn.beeradvocate.com/im/beers/2093.jpg', 'the parameter for beer_image_url in metadata should be a http://cdn.beeradvocate.com/im/beers/2093.jpg')
 
+    # def test_get_next_recommendation(self):
+    #     beer_recomendation = database.get_next_recommendation(10)
+    #     eq_(isinstance(beer_recomendation, (int, long)), True, 'get_next_recommendation should return the id of a beer')
