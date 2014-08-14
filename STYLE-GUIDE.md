@@ -1,13 +1,6 @@
 ### Indentation
 
-4 spaces
-
-```python
-```
-    ```python
-    def function():
-        do_stuff()
-    ```
+* 4 spaces
 
 ### Variable names
 
@@ -145,9 +138,5 @@
 
     ```
 
-* End files with a newline.
+* End files with _a_ newline.
 * Don't have trailing whitespace in lines.
-
-
-
-
