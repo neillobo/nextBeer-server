@@ -20,7 +20,6 @@ except ImportError:
 
 app = Flask(__name__)
 # configure a default header
-app.config['CORS_ORIGINS'] = "*"
 app.config['CORS_HEADERS'] = ['Content-Type','Authorization']
 app.config['CORS_RESOURCES'] = {r"/api/*": {"origins": "*"}}
 cors = CORS(app)
@@ -39,8 +38,8 @@ def create_new_user():
 def get_next_recommendation():
     # we get a POST request from the client in JSON format
     # whose request body contains beer_id and beer_rating
-    # token comes in "Bearer xvgsfddf" fashion as per the convention
-    token = request.headers['Authorization'].split(' ')[1]
+    # token comes in "xvgsfddf" as a string
+    token = request.headers['Authorization']
     data = request.json
     beer_id = data['beer_id']
     beer_rating = data['beer_rating']
