@@ -6,7 +6,7 @@ import string
 import random
 
 
-db_location = os.environ.get("DATABASE_URL", "postgres://postgres@127.0.0.1:5432/postgres")
+db_location = os.environ.get("DATABASE_URL", "postgres://postgres@127.0.0.1:5432/test_nextbeer")
 db = Postgres(db_location)
 
 
