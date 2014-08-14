@@ -26,13 +26,17 @@ def save_to_profile(user_id, beer_id, beer_rating):
 
 
 def get_metadata(beer_id):
-    metadata = db.one('SELECT beer_id, beer_name, beer_image_url  \
-        FROM beer_names WHERE beer_id=%(beer_id)s', {"beer_id": beer_id})
+
+    metadata = db.one('SELECT beer_id, beer_name, beer_image_url, beer_style, \
+        brewery_name, beer_abv FROM beer_names WHERE beer_id=%(beer_id)s', {"beer_id": beer_id})
 
     return {
         "beer_id": metadata.beer_id,
         "beer_name": metadata.beer_name,
-        "beer_image_url": metadata.beer_image_url
+        "beer_image_url": metadata.beer_image_url,
+        "beer_style": metadata.beer_style,
+        "brewery_name": metadata.brewery_name,
+        "beer_abv": metadata.beer_abv
     }
 
 def get_nearest_beers(beer_id, num=10):
@@ -60,5 +64,4 @@ def get_next_recommendations(user_id, num=10):
             (SELECT DISTINCT beer_id FROM reviews WHERE user_id=%(user_id)s)) \
         AND beer_id NOT IN (SELECT beer_id FROM reviews WHERE user_id=%(user_id)s) \
         GROUP BY beer_id ORDER BY COUNT(*) DESC LIMIT %(num)s", {"user_id": user_id, "num": num})
-
 
