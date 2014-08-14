@@ -6,7 +6,7 @@ import string
 import random
 
 
-db_location = os.environ.get("DATABASE_URL", "postgres://postgres@127.0.0.1:5432/test_nextbeer")
+db_location = os.environ.get("DATABASE_URL", "postgres://postgres@127.0.0.1:5432/postgres")
 db = Postgres(db_location)
 
 
@@ -26,7 +26,6 @@ def save_to_profile(user_id, beer_id, beer_rating):
 
 
 def get_metadata(beer_id):
-
     metadata = db.one('SELECT beer_id, beer_name, beer_image_url, beer_style, \
         brewery_name, beer_abv FROM beer_names WHERE beer_id=%(beer_id)s', {"beer_id": beer_id})
 
