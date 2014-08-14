@@ -2,6 +2,8 @@
 
 4 spaces
 
+```python
+```
     ```python
     def function():
         do_stuff()
@@ -67,14 +69,14 @@
 * For lists, put commas at the end of each newline, not at the beginning of each item in a list
 
     ```python
-    // good:
+    # good:
     animals = [
       'ape',
       'bat',
       'cat'
     ]
 
-    // bad:
+    # bad:
     animals = [
         'ape'
       , 'bat'
@@ -102,21 +104,32 @@
 * You may use it as padding for visual clarity. If you do though, make sure it's balanced on both sides.
 
     ```python
-    // optional:
-    alert( 'I chose to put visual padding around this string' )
+    # optional:
+    do_stuff( 'I chose to put visual padding around this string' )
 
-    // bad:
-    alert( 'I only put visual padding on one side of this string')
+    # bad:
+    do_stuff( 'I only put visual padding on one side of this string')
     ```
 
-* You may use it to align two similar lines, but it is not recommended. This pattern usually leads to unnecessary edits of many lines in your code every time you change a variable name.
+* When there are multiple conditions in an if statement, group them explicitly
 
     ```python
-    // discouraged:
+    # good:
+    if (condition1 and condition2) or condition3:
+
+    # too much:
+    if (condition1 and condition2):
+
+    ```
+
+* You may use spaces to align two similar lines, but it is not recommended.
+
+    ```python
+    # discouraged:
     firstItem  = getFirst()
     secondItem = getSecond()
 
-    // why??:
+    # why??:
     firstItem = getFirst  ()
     secondItem = getSecond()
     ```
