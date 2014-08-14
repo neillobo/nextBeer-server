@@ -1,6 +1,6 @@
 # Next Beer
 
-> Recommendation app that gives beer suggestions and pairing recommendations
+> The first beer recommendation app with a fun interface.
 
 ## Team
 
@@ -8,33 +8,17 @@
   - __Scrum Master__: Boris Verkhovskiy
   - __Development Team Members__: Caly Moss, DH Lee
 
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
-    1. [Installing Dependencies](#installing-dependencies)
-    1. [Running Tests](#tests)
-    1. [Tasks](#tasks)
-1. [Team](#team)
-1. [Contributing](#contributing)
-
-## Usage
-
-> Some usage instructions
-
 ## Requirements
 
-
-
-## Development
+Python 2.6+
+See [requirements.txt](requirements.txt) for required python packages
 
 ### Installing Dependencies
 
 
-We use virtualenv to manage dependencies in the npm fashion
+We use virtualenv to manage dependencies.
 
-If you want to install all dependencies,
+To install all dependencies,
 
 ```sh
 pip install virtualenv
@@ -42,16 +26,6 @@ virtualenv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-
-If you want to add a new dependency,
-
-```sh
-pip install new_package_name
-pip freeze > requirements.txt
-```
-
-Now the newly installed package will be automatically added to the requirements.txt
-
 
 ### Tasks
 
