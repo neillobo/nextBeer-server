@@ -16,23 +16,23 @@
 
     ```python
     # good:
-    var animals = ['cat', 'dog', 'fish']
+    animals = ['cat', 'dog', 'fish']
 
     # bad:
-    var animal = ['cat', 'dog', 'fish']
+    animal = ['cat', 'dog', 'fish']
 
     # worse:
-    var animalList = ['cat', 'dog', 'fish']
+    animalList = ['cat', 'dog', 'fish']
     ```
 
 * Name your variables after their purpose, not their structure
 
     ```python
     # good:
-    var animals = ['cat', 'dog', 'fish']
+    animals = ['cat', 'dog', 'fish']
 
     # bad:
-    var array = ['cat', 'dog', 'fish']
+    array = ['cat', 'dog', 'fish']
     ```
 
 
