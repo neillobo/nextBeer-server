@@ -1,16 +1,11 @@
-## generic files to ignore
+## generic files
 *.lock
 *.DS_Store
 *.swp
 *.out
-
 
 ## python
 *.pyc
 
 ## dependencies
 venv/
-specs/stubs/*.txt
-
-##annoying files
-*.orig
