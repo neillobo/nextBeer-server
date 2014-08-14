@@ -27,11 +27,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Tasks
-
-See the projects backlog in asana [here](https://LINKTOYOURASANA.com)
-
-
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
