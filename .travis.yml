@@ -16,7 +16,6 @@ before_script:
 
 script: nosetests specs/test.py -v
 
-# Whitelisting example
 branches:
   only:
     - master
