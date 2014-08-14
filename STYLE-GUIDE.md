@@ -38,17 +38,21 @@
 
 ### Language constructs
 
-* Focus on using built in python methods. As a general rule, if you're doing `range(len(foo))`, you're doing it wrong.
+* Focus on using built in python methods
 
+* If you're doing `range(len(foo))`, you're doing it wrong.
     ```python
-    # good:
-    for obj, arg in zip(objects, fn_args):
-        obj.do_stuff(arg)
+    # need list item and the index:
+    for index, item in enumerate(list_one):
+        do_stuff(index, item)
 
-    # bad:
-    for i in range(len(objects)):
-        objects[i].do_stuff(fn_args[i])
+    # iterate over part of list:
+    for item in list_one[10:20]:
+        do_stuff(item)
 
+    # iterating over two lists:
+    for first_item, second_item in zip(list_one, list_two):
+        do_stuff(first_item, second_item)
     ```
 
 ### Minor Points
@@ -76,6 +80,17 @@
       , 'cat'
     ]
     ```
+
+* If you're checking if an item is in a list frequently, convert the list to a set first (constant time lookup).
+
+    ```python
+    # good:
+    list_one = set(list_one)
+    for item in list_two:
+        if item in list_one:
+            do_stuff(item)
+    ```
+
 
 
 ### Code density
