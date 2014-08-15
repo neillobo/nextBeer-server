@@ -37,9 +37,6 @@ psql -c 'create database test_nextbeer;' -U postgres
 psql -a -U postgres -d test_nextbeer -f resetTables.sql
 ```
 
-
-
-
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
