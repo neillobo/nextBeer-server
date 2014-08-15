@@ -29,6 +29,17 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+To start and reload the database,
+
+```sh
+pg_ctl start
+psql -c 'create database test_nextbeer;' -U postgres
+psql -a -U postgres -d test_nextbeer -f resetTables.sql
+```
+
+
+
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
