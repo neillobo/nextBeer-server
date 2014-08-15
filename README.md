@@ -11,6 +11,8 @@
 ## Requirements
 
 Python 2.6+
+pip
+Postgres 9.3.4
 See [requirements.txt](requirements.txt) for required python packages
 
 ### Installing Dependencies
