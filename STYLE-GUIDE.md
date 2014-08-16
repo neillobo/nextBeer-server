@@ -35,7 +35,6 @@
     array = ['cat', 'dog', 'fish']
     ```
 
-
 ### Language constructs
 
 * Focus on using built in python methods
