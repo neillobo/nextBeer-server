@@ -15,7 +15,7 @@ CORS(app)
 
 
 seed_list = list(string.digits + string.uppercase)
-@app.route('/api/v2/user', methods=['POST'])
+@app.route('/api/v3/user', methods=['POST'])
 def create_new_user():
     # generate a "random" (36**10 possibilities) identifier for a user
     unique_string = "".join([random.choice(seed_list) for _ in range(10)])
