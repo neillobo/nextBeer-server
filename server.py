@@ -23,6 +23,7 @@ def create_new_user():
     database.save_new_user(unique_string)
     return jsonify({"token": unique_string})
 
+# API v3 uses the Weighted Slope One Algorithm 
 @app.route('/api/v3/rate', methods = ['POST'])
 def get_best_recommendation():
     unique_string = request.headers['Authorization']
@@ -34,7 +35,6 @@ def get_best_recommendation():
     database.save_to_profile(user_id, beer_id, beer_rating)
     
     recommended_beer_id = database.get_best_recommendation(user_id)
-    print "Saving recommended beer id with", recommended_beer_id
     database.save_recommendation(user_id,recommended_beer_id) # save the recommendation so we dont return it again
     print recommended_beer_id
     return jsonify(database.get_metadata(recommended_beer_id))
