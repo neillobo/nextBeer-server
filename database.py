@@ -11,13 +11,20 @@ db = Postgres(db_location)
     
 
 def get_best_recommendation(user_id):
-    return get_best_recommendations(user_id)[0]
+    recommended_beers =  get_best_recommendations(user_id)
+    # print "Recommended beers are ", recommended_beers
+    for beerid,distance in recommended_beers:
+        is_beer_present = db.one("SELECT beer_id FROM recommended_beers where user_id=%(user_id)s and beer_id=%(beerid)s",{"user_id" : user_id, "beerid":beerid})
+        print "Was this beer was found?",is_beer_present 
+        if is_beer_present is None:
+            print "Returning beerid:",beerid
+            return beerid;
 
 def get_best_recommendations(user_id):
     return db.all("SELECT beer2_id, sum((m.deviation+u.beer_rating)*m.cardinality)/sum(m.cardinality) AS score FROM \
         reduced_matrix m, reviews u WHERE  m.beer1_id=u.beer_id AND u.user_id=%(user_id)s AND beer2_id IN \
         (SELECT beer2_id FROM reduced_matrix WHERE beer1_id IN (SELECT beer_id FROM reviews where user_id=%(user_id)s))\
-         GROUP BY beer2_id order by score desc",{"user_id" : user_id})
+         GROUP BY beer2_id order by score desc limit 12",{"user_id" : user_id})
 
 def save_new_user(unique_string):
     db.run("INSERT INTO users (cookie) VALUES(%(cookie)s)", { "cookie" : unique_string })
@@ -33,6 +40,12 @@ def save_to_profile(user_id, beer_id, beer_rating):
     }
     db.run("INSERT INTO reviews VALUES (%(user_id)s, %(beer_id)s, %(beer_rating)s)", values)
 
+def save_recommendation(user_id,recommended_beer_id):
+    values = {
+        "user_id" : user_id,
+        "beer_id" : recommended_beer_id
+    }
+    db.run("INSERT into recommended_beers values(%(user_id)s, %(beer_id)s)", values)
 
 def get_metadata(beer_id):
     metadata = db.one('SELECT beer_id, beer_name, beer_image_url, beer_style, \

@@ -33,27 +33,30 @@ def get_best_recommendation():
     user_id = database.get_userid_from_string(unique_string)
     database.save_to_profile(user_id, beer_id, beer_rating)
     
-    recommended_beer_id = database.get_best_recommendation(user_id).beer2_id
+    recommended_beer_id = database.get_best_recommendation(user_id)
+    print "Saving recommended beer id with", recommended_beer_id
+    database.save_recommendation(user_id,recommended_beer_id) # save the recommendation so we dont return it again
     print recommended_beer_id
     return jsonify(database.get_metadata(recommended_beer_id))
 
 
-@app.route('/api/v2/rate', methods = ['POST'])
-def get_next_recommendation():
-    # we get a POST request from the client in JSON format
-    # whose request body contains beer_id and beer_rating
-    # unique_string comes in "xvgsfddf" as a string
-    unique_string = request.headers['Authorization']
-    data = request.json
-    beer_id = data['beer_id']
-    beer_rating = data['beer_rating']
+# @app.route('/api/v2/rate', methods = ['POST'])
+# def get_next_recommendation():
+#     # we get a POST request from the client in JSON format
+#     # whose request body contains beer_id and beer_rating
+#     # unique_string comes in "xvgsfddf" as a string
+#     unique_string = request.headers['Authorization']
+#     data = request.json
+#     beer_id = data['beer_id']
+#     beer_rating = data['beer_rating']
 
-    user_id = database.get_userid_from_string(unique_string)
-    database.save_to_profile(user_id, beer_id, beer_rating)
+#     user_id = database.get_userid_from_string(unique_string)
+    
+#     database.save_to_profile(user_id, beer_id, beer_rating)
 
-    recommended_beer_id = database.get_next_recommendation(user_id)
-    database.save_to_profile(user_id, beer_id, 0) # save it with no rating
-    return jsonify(database.get_metadata(recommended_beer_id))
+#     recommended_beer_id = database.get_next_recommendation(user_id)
+#     database.save_to_profile(user_id, beer_id, 0) # save it with no rating
+#     return jsonify(database.get_metadata(recommended_beer_id))
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
 def get_similar_beer(beer_id):
