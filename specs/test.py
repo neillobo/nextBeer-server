@@ -16,10 +16,10 @@ class Test_Unit(object):
         # any setup to run before the class gets instantiated
         pass
 
-    def test_get_nearest_beers(self):
-        associated_beer_list = database.get_nearest_beers(2093)
-        eq_(len(associated_beer_list), 10, 'get_nearest_beers should return a list of 10 items by default')
-        eq_(type(associated_beer_list) is list, True, 'get_nearest_beers should return a list')
+    # def test_get_nearest_beers(self):
+    #     associated_beer_list = database.get_nearest_beers(2093)
+    #     eq_(len(associated_beer_list), 10, 'get_nearest_beers should return a list of 10 items by default')
+    #     eq_(type(associated_beer_list) is list, True, 'get_nearest_beers should return a list')
 
 
     def test_get_metadata(self):
