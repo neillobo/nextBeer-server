@@ -15,10 +15,8 @@ def get_best_recommendation(user_id):
     # print "Recommended beers are ", recommended_beers
     for beerid,distance in recommended_beers:
         is_beer_present = db.one("SELECT beer_id FROM recommended_beers where user_id=%(user_id)s and beer_id=%(beerid)s",{"user_id" : user_id, "beerid":beerid})
-        print "Was this beer was found?",is_beer_present 
-        if is_beer_present is None:
-            print "Returning beerid:",beerid
-            return beerid;
+        if is_beer_present is None:     
+            return beerid
 
 def get_best_recommendations(user_id):
     return db.all("SELECT beer2_id, sum((m.deviation+u.beer_rating)*m.cardinality)/sum(m.cardinality) AS score FROM \
