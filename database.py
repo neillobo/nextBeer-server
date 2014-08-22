@@ -8,18 +8,16 @@ db = Postgres(db_location)
 
 
 def get_next_recommendation(user_id):
-    recommended_beers =  get_next_recommendations(user_id)
-    # print 'Recommended beers are ', recommended_beers
-    for beerid, distance in recommended_beers:
-        is_beer_present = db.one('SELECT beer_id FROM recommended_beers where user_id=%(user_id)s and beer_id=%(beerid)s',{'user_id' : user_id, 'beerid':beerid})
-        if not is_beer_present:
-            return beerid
+    try:
+        return get_next_recommendations(user_id, 1)[0]
+    except IndexError:
+        return None
 
-def get_next_recommendations(user_id):
+def get_next_recommendations(user_id, num=10):
     return db.all('SELECT beer2_id, sum((m.deviation+u.beer_rating)*m.cardinality)/sum(m.cardinality) AS score FROM \
         reduced_matrix m, reviews u WHERE  m.beer1_id=u.beer_id AND u.user_id=%(user_id)s AND beer2_id IN \
         (SELECT beer2_id FROM reduced_matrix WHERE beer1_id IN (SELECT beer_id FROM reviews where user_id=%(user_id)s))\
-         GROUP BY beer2_id order by score desc limit 60',{'user_id' : user_id})
+         GROUP BY beer2_id order by score desc limit %(num)s', {'user_id' : user_id, 'num': num})
 
 def save_new_user(unique_string):
     db.run('INSERT INTO users (cookie) VALUES(%(cookie)s)', { 'cookie' : unique_string })
