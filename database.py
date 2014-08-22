@@ -15,7 +15,7 @@ def get_best_recommendation(user_id):
     # print "Recommended beers are ", recommended_beers
     for beerid,distance in recommended_beers:
         is_beer_present = db.one("SELECT beer_id FROM recommended_beers where user_id=%(user_id)s and beer_id=%(beerid)s",{"user_id" : user_id, "beerid":beerid})
-        if is_beer_present is None:
+        if not is_beer_present:
             return beerid
 
 def get_best_recommendations(user_id):
@@ -60,7 +60,7 @@ def get_metadata(beer_id):
 
 def get_nearest_beer(beer_id):
     try:
-        return get_nearest_beers(beer_id, num=10)[0]
+        return get_nearest_beers(beer_id, num=1)[0]
     except IndexError:
         return None
 
