@@ -3,7 +3,7 @@ import urlparse
 from postgres import Postgres
 
 
-db_location = os.environ.get('DATABASE_URL', 'postgres://postgres@127.0.0.1:5432/postgres')
+db_location = os.environ.get('DATABASE_URL', 'postgres://postgres@127.0.0.1:5432/nextbeer')
 db = Postgres(db_location)
 
 

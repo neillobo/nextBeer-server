@@ -8,7 +8,7 @@ import database
 
 app = Flask(__name__)
 
-# configure a default header
+# this api is public so we will allow requests to it originating from any URL
 app.config['CORS_HEADERS'] = ['Content-Type','Authorization']
 app.config['CORS_RESOURCES'] = {'/api/*': {'origins': '*'}}
 CORS(app)
