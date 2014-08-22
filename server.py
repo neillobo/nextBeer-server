@@ -42,30 +42,44 @@ def get_best_recommendation():
 
 @app.route('/api/v2/rate', methods = ['POST'])
 def get_next_recommendation():
-    # we get a POST request from the client in JSON format
-    # whose request body contains beer_id and beer_rating
-    # unique_string comes in "xvgsfddf" as a string
-    unique_string = request.headers['Authorization']
-    data = request.json
-    beer_id = data['beer_id']
-    beer_rating = data['beer_rating']
+    '''
+    The client sends a POST requests that represents a review of a beer we
+    recommended previously. We save this rating and send back a new
+    recommendation
 
+    The client identifies itself with its unique_string which it passes
+    in the request header
+    '''
+    unique_string = request.headers['Authorization']
     user_id = database.get_userid_from_string(unique_string)
 
-    database.save_to_profile(user_id, beer_id, beer_rating)
+    if user_id:
+        data = request.json
+        beer_id = data['beer_id']
+        beer_rating = data['beer_rating']
 
-    recommended_beer_id = database.get_next_recommendation(user_id)
-    database.save_to_profile(user_id, recommended_beer_id, 0) # save it with no rating
-    return jsonify(database.get_metadata(recommended_beer_id))
+        database.save_to_profile(user_id, beer_id, beer_rating)
+
+        recommended_beer_id = database.get_next_recommendation(user_id)
+        # note that this beer has been recommended already
+        database.save_to_profile(user_id, recommended_beer_id, 0)
+
+        return jsonify(database.get_metadata(recommended_beer_id))
+    else:
+        print 'bad unique_string %s' % unique_string
+        return jsonify({})
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
 def get_similar_beer(beer_id):
-    try:
-        top_beer = database.get_nearest_beers(beer_id, 1)[0]
-        recommended_beer_id = top_beer[1]
+    '''
+    The client sends a get request which represents a request for beers similar
+    to the beer in the url
+    '''
+    recommended_beer_id = database.get_nearest_beer(beer_id)
+    if recommended_beer_id:
         return jsonify(database.get_metadata(recommended_beer_id))
-    except IndexError:
-        return jsonify({})
+    else:
+        return jsonify({}), 404
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))

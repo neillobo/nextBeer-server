@@ -8,14 +8,14 @@ import random
 
 db_location = os.environ.get("DATABASE_URL", "postgres://postgres@127.0.0.1:5432/postgres")
 db = Postgres(db_location)
-    
+
 
 def get_best_recommendation(user_id):
     recommended_beers =  get_best_recommendations(user_id)
     # print "Recommended beers are ", recommended_beers
     for beerid,distance in recommended_beers:
         is_beer_present = db.one("SELECT beer_id FROM recommended_beers where user_id=%(user_id)s and beer_id=%(beerid)s",{"user_id" : user_id, "beerid":beerid})
-        if is_beer_present is None:     
+        if is_beer_present is None:
             return beerid
 
 def get_best_recommendations(user_id):
@@ -58,15 +58,16 @@ def get_metadata(beer_id):
         "beer_abv": metadata.beer_abv
     }
 
+def get_nearest_beer(beer_id):
+    try:
+        return get_nearest_beers(beer_id, num=10)[0]
+    except IndexError:
+        return None
+
+
 def get_nearest_beers(beer_id, num=10):
-    beers = db.all('SELECT * FROM distances WHERE beer1_id=%(beer_id)s \
-        OR beer2_id=%(beer_id)s', {"beer_id": beer_id})
-    beers.sort(key=lambda x: x[2])
-
-    if not beers:
-        print 'ERROR: no beers found for id', beer_id
-
-    return beers[:num]
+    return db.all('SELECT beer2_id FROM distances WHERE beer1_id=%(beer_id)s \
+        ORDER BY review_overall DESC LIMIT %(num)s', {"beer_id": beer_id, 'num': num})
 
 def get_next_recommendation(user_id):
     return get_next_recommendations(user_id, 1)[0]
