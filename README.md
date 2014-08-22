@@ -10,10 +10,10 @@
 
 ## Requirements
 
-Python 2.6+
-pip
-Postgres 9.3.4
-See [requirements.txt](requirements.txt) for required python packages
+  - Python 2.6+
+  - pip
+  - Postgres 9.3.4
+  - See [requirements.txt](requirements.txt) for required python packages
 
 ### Installing Dependencies
 
@@ -33,8 +33,8 @@ To start and reload the database,
 
 ```sh
 pg_ctl start
-psql -c 'create database test_nextbeer;' -U postgres
-psql -a -U postgres -d test_nextbeer -f resetTables.sql
+psql -c 'create database nextbeer;' -U postgres
+psql -a -U postgres -d nextbeer -f resetTables.sql
 ```
 
 ## Contributing
