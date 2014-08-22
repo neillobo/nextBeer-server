@@ -22,7 +22,7 @@ def get_best_recommendations(user_id):
     return db.all("SELECT beer2_id, sum((m.deviation+u.beer_rating)*m.cardinality)/sum(m.cardinality) AS score FROM \
         reduced_matrix m, reviews u WHERE  m.beer1_id=u.beer_id AND u.user_id=%(user_id)s AND beer2_id IN \
         (SELECT beer2_id FROM reduced_matrix WHERE beer1_id IN (SELECT beer_id FROM reviews where user_id=%(user_id)s))\
-         GROUP BY beer2_id order by score desc limit 12",{"user_id" : user_id})
+         GROUP BY beer2_id order by score desc limit 60",{"user_id" : user_id})
 
 def save_new_user(unique_string):
     db.run("INSERT INTO users (cookie) VALUES(%(cookie)s)", { "cookie" : unique_string })
