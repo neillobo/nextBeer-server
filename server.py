@@ -50,24 +50,37 @@ def get_next_recommendation():
     The client identifies itself with its unique_string which it passes
     in the request header
     '''
-    unique_string = request.headers['Authorization']
+    try:
+        unique_string = request.headers['Authorization']
+    except KeyError:
+        print 'sent review without auth'
+        return jsonify({}), 401
+
     user_id = database.get_userid_from_string(unique_string)
+    if not user_id:
+        print 'bad unique_string %s' % unique_string
+        return jsonify({}), 401
 
-    if user_id:
-        data = request.json
-        beer_id = data['beer_id']
-        beer_rating = data['beer_rating']
+    review = request.json
+    if not review:
+        print 'did not get a json review'
+        return jsonify({}), 400
 
+    try:
+        beer_id = review['beer_id']
+        beer_rating = review['beer_rating']
         database.save_to_profile(user_id, beer_id, beer_rating)
 
         recommended_beer_id = database.get_next_recommendation(user_id)
-        # note that this beer has been recommended already
+
+        # mark that this beer has been recommended
         database.save_to_profile(user_id, recommended_beer_id, 0)
 
         return jsonify(database.get_metadata(recommended_beer_id))
-    else:
-        print 'bad unique_string %s' % unique_string
-        return jsonify({})
+
+    except KeyError as missing_param:
+        print 'Review missing parameter %s' % missing_param
+        return jsonify({}), 400
 
 @app.route('/api/v1/<beer_id>', methods = ['GET'])
 def get_similar_beer(beer_id):
