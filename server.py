@@ -7,6 +7,7 @@ import random
 import database
 
 app = Flask(__name__)
+app.config.from_pyfile('config.py')
 
 # this api is public so we will allow requests to it originating from any URL
 app.config['CORS_HEADERS'] = ['Content-Type','Authorization']
