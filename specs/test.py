@@ -16,11 +16,6 @@ class Test_Unit(object):
         # any setup to run before the class gets instantiated
         pass
 
-    # def test_get_nearest_beers(self):
-    #     associated_beer_list = database.get_nearest_beers(2093)
-    #     eq_(len(associated_beer_list), 10, 'get_nearest_beers should return a list of 10 items by default')
-    #     eq_(type(associated_beer_list) is list, True, 'get_nearest_beers should return a list')
-
 
     def test_get_metadata(self):
         test_beer_id = 2093
@@ -40,6 +35,23 @@ class Test_Unit(object):
         eq_(isinstance(beer_meta_data['beer_image_url'], basestring), True, 'the parameter for beer_image_url in metadata should be a string')
         eq_(beer_meta_data['beer_image_url'], 'http://cdn.beeradvocate.com/im/beers/2093.jpg', 'the parameter for beer_image_url in metadata should be a http://cdn.beeradvocate.com/im/beers/2093.jpg')
 
-    # def test_get_next_recommendation(self):
-    #     beer_recomendation = database.get_next_recommendation(10)
-    #     eq_(isinstance(beer_recomendation, (int, long)), True, 'get_next_recommendation should return the id of a beer')
+    def test_get_next_recommendation(self):
+        beer_recomendation = database.get_next_recommendation(10)
+        eq_(isinstance(beer_recomendation, (int, long)), True, 'get_next_recommendation should return a beer id')
+        repeat_beer_recomendation = database.get_next_recommendation(10)
+        eq_(repeat_beer_recomendation, beer_recomendation, 'get_next_recommendation should be consistent')
+
+
+    def test_get_nearest_beers(self):
+        beer_recomendations = database.get_nearest_beers(2093)
+        eq_(isinstance(beer_recomendations, list), True, 'get_nearest_beers should return a list of beer ids')
+        eq_(len(beer_recomendations), 10, 'get_nearest_beers should return a list of length 10 by default')
+        eq_(len(database.get_nearest_beers(2093, 5)), 5, 'get_nearest_beers should be able to return a list of variable length')
+        eq_(database.get_nearest_beers(2093, 5), beer_recomendations[:5], 'get_nearest_beers should be consistent when returning a list of variable length')
+
+    def test_get_nearest_beer(self):
+        beer_recomendation = database.get_nearest_beer(2093)
+        eq_(isinstance(beer_recomendation, (int)), True, 'get_nearest_beer should return a single beer id')
+        eq_(database.get_nearest_beer(9999999), None, 'get_nearest_beer should gracefully return None for a bad beer id')
+
+
