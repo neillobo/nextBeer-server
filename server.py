@@ -14,7 +14,6 @@ app.config['CORS_RESOURCES'] = {'/api/*': {'origins': '*'}}
 CORS(app)
 
 @app.route('/api/v3/user', methods=['POST'])
-@app.route('/api/v2/user', methods=['POST'])
 def create_new_user():
     '''
     Generate a random (36**10 possibilities) identifier for the client

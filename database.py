@@ -8,13 +8,7 @@ db = Postgres(db_location)
 
 
 def get_next_recommendation(user_id):
-    try:
-        return get_next_recommendations(user_id)[0]
-    except IndexError:
-        return None
-
-def get_next_recommendations(user_id):
-    return db.all('SELECT beer2_id, sum((m.deviation+u.beer_rating)*m.cardinality)/sum(m.cardinality) AS score FROM \
+    return db.one('SELECT beer2_id, sum((m.deviation+u.beer_rating)*m.cardinality)/sum(m.cardinality) AS score FROM \
         reduced_matrix m, reviews u WHERE  m.beer1_id=u.beer_id AND u.user_id=%(user_id)s AND beer2_id IN \
         (SELECT beer2_id FROM reduced_matrix WHERE beer1_id IN (SELECT beer_id FROM reviews where user_id=%(user_id)s))\
          AND beer2_id NOT IN (SELECT beer_id from recommended_beers r where r.user_id=%(user_id)s and r.beer_id is NOT NULL)\
