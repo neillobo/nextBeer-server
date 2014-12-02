@@ -14,7 +14,7 @@ app.config['CORS_HEADERS'] = ['Content-Type','Authorization']
 app.config['CORS_RESOURCES'] = {'/api/*': {'origins': '*'}}
 CORS(app)
 
-@app.route('/api/v3/user', methods=['POST'])
+@app.route('/api/v3/user', methods=['POST','OPTIONS'])
 def create_new_user():
     '''
     Generate a random (36**10 possibilities) identifier for the client
@@ -30,7 +30,7 @@ def create_new_user():
     return jsonify({"token": unique_string})
 
 # API v3 uses the Weighted Slope One Algorithm
-@app.route('/api/v3/rate', methods = ['POST'])
+@app.route('/api/v3/rate', methods = ['POST','OPTIONS'])
 def get_best_recommendation():
     '''
     The client sends a POST requests that represents a review of a beer we
@@ -74,7 +74,7 @@ def get_best_recommendation():
     return jsonify(database.get_metadata(recommended_beer_id))
 
 
-@app.route('/api/v1/<beer_id>', methods = ['GET'])
+@app.route('/api/v1/<beer_id>', methods = ['GET','OPTIONS'])
 def get_similar_beer(beer_id):
     '''
     The client sends a get request which represents a request for beers similar
