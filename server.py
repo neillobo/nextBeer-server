@@ -23,7 +23,7 @@ def create_new_user():
     requests it makes.
     The unique_string can be thought of as a randomly generated username.
     '''
-    possible_chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ' # string.digits + string.uppercase
+    possible_chars =  string.digits + string.uppercase # '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     unique_string = ''.join([random.choice(possible_chars) for _ in range(10)])
 
     database.save_new_user(unique_string)

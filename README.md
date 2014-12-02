@@ -36,6 +36,10 @@ pg_ctl start
 psql -c 'create database nextbeer;' -U postgres
 psql -a -U postgres -d nextbeer -f resetTables.sql
 ```
+For Heroku, login to heroku cli and then
+heroku config (to get Database name)
+heroku pg:psql Database_name
+\i resetTables.sql
 
 ## Contributing
 

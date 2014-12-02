@@ -16,6 +16,16 @@ class Test_Unit(object):
         # any setup to run before the class gets instantiated
         pass
 
+    def create_new_user(self):
+        identifier = server.create_new_user()
+        eq_(type(identifier) is basestring, True, 'create_new_user should return a unique identifier as a string')
+        eq_(len(identifier), 10, 'create_new_user identifier should be exactly of length 10')
+
+    def get_best_recommendation(self):
+        return
+
+
+
 
     def test_get_metadata(self):
         test_beer_id = 2093
